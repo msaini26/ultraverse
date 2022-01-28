@@ -9,3 +9,12 @@ def register(request):
 
 def login(request):
     return render(request, 'login.html')
+
+def map(request):
+    return render(request, 'map.html')
+
+def events(request):
+    return render(request, 'events.html')
+
+def event(request):
+    return render(request, 'event.html')
