@@ -5,14 +5,6 @@
     <h1>Register</h1>
     <form action="" method="POST">
         {% csrf_token %}
-        <!-- as_p cleans up form, showing line by line -->
-        <!-- {{ form.as_p}} -->
-
-        <!-- Cleans up extra verbiage from default form -->
-        <!-- {% for field in form %}
-            {{ field.label }}
-            {{ field }}
-        {% endfor %} -->
         
         {{ form.username.label }}
         {{ form.username }}
