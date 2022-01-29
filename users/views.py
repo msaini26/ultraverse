@@ -15,6 +15,7 @@ def register(request):
 
 def login(request):
     # if request.user.is_authenticated:
+    #     logger.info('Login template was not rendered. User was redirected to home.')
     #     return redirect('home')
     # else:
         if request.method == 'POST':
