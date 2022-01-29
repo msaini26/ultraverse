@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import *
 
 # Create your views here.
 def home(request):
@@ -9,3 +10,15 @@ def register(request):
 
 def login(request):
     return render(request, 'login.html')
+
+# This is temporary for testing on backend
+def developer(request):
+    events = Event.objects.order_by('author').all()
+    comments = Comment.objects.order_by('author').all()
+    
+    context = {
+        'events': events,
+        'comments': comments,
+    }
+
+    return render(request, 'developer.html', context)
