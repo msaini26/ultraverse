@@ -26,8 +26,9 @@ def login(request):
             
             if user is not None:
                 login(request, user)
-                logger.info('Login successful. Redirecting to dashboard.')
-                return redirect('dashboard')
+                # TODO: Fix redirect once we have an established page to redirect user upon login
+                logger.info('Login successful. Redirecting to home.')
+                return redirect('home')
             else: 
                 messages.info(request, 'username or password is incorrect')
         
