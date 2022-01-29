@@ -1,16 +1,15 @@
 
-<<<<<<< HEAD
 .loginBackground {
     padding: 100px;
     background-color: #1E2639;
-=======
+}
 
 body {
     background-color: #97AABD;
     margin: 0;
     font-family: "Segoe UI";
->>>>>>> be20b033f6f08b7e38b97d97a9d548e30c7f7a4d
 }
+
 /* Nav Bar Styling */
 ul {
     margin: 0;
