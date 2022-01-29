@@ -11,9 +11,12 @@ body {
 
 /* Nav Bar Styling */
 ul {
-    list-style-type:none;
     margin: 0;
     padding: 0;
+}
+
+.nav_elements {
+  text-decoration: none;
 }
 /* End Nav Bar Styling */
 
