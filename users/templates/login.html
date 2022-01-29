@@ -1,8 +1,23 @@
 {% extends 'base.html' %}
 
 {% block content %}
+    <!-- Modal -->
+<div class="loginBackground" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+         
+          
+          <div class="column" id="secondary2">
+            <div class="sec-content">
+              <img src="/static/images/cityStars.PNG" alt="city with stars">
+              <h2>Welcome!</h2>
+              <h3>Create an account and join watch parties!</h3>
+              <a href="{% url 'register' %}"><button type="button" class="btn btn-primary">Sign Up</button></a>
+            </div>
+          </div>
 
-    <h1>Login</h1>
+    <!-- <h1>Login</h1>
     <form action="" method="POST">
         {% csrf_token %}
         
@@ -16,6 +31,28 @@
 
     {% for message in messages %}
         <p>{{ message }}</p>
-    {% endfor %}
+    {% endfor %} -->
+
+
+          <div class="column" id="main">
+            <h1>Login </h1>
+            <h3>Access your watch parties!</h3>
+            <form>
+              <div class="form-group">
+                <label for="exampleInputName">Username</label>
+                <input type="username" class="form-control" id="exampleInputName" placeholder="Username">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+              </div>
+              <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
 
 {% endblock %}

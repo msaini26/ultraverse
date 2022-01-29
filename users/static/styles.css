@@ -1,0 +1,506 @@
+.loginBackground {
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  background-color: #1e2639;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: #951e22;
+  margin: 0;
+  font-family: "Segoe UI";
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Nav Bar Styling */
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  display: inline-block;
+}
+
+.nav_elements {
+  text-decoration: none;
+}
+
+.nav-link {
+  padding: 0.5rem 0rem;
+}
+
+#logo {
+  width: 175px;
+}
+
+/* Nav toggle button */
+#toggle {
+  border-color: #f8f9fa;
+}
+
+#toggle:active {
+  border-color: #f8f9fa;
+}
+/* Nav toggle button */
+
+/* End Nav Bar Styling */
+
+/* Login Page Styling */
+.modal-body {
+  display: flex;
+  padding: 0;
+  border-radius: 4rem;
+  font-family: "PT Sans", sans-serif;
+  box-shadow: 5px 5px 5px #fff58c;
+}
+
+.modal-content {
+  border-radius: 4rem;
+  width: 140%;
+  box-shadow: -1px -2px 42px -19px rgba(0, 0, 0, 0.74);
+}
+.modal-content h1,
+.modal-content h2,
+.modal-content h3 {
+  text-align: center;
+}
+.modal-content h1 {
+  font-size: 1.3em;
+  text-transform: uppercase;
+}
+
+.modal-content h2 {
+  font-size: 1.1em;
+}
+.modal-content h3 {
+  font-size: 0.8em;
+  letter-spacing: 2px;
+}
+form {
+  font-size: 0.8em;
+}
+.column {
+  flex: 60%;
+  padding: 10px;
+}
+
+.column#main {
+  font-family: "Segoe UI";
+  flex: 75%;
+  padding: 50px;
+  margin-top: 30px;
+  margin-left: 15px;
+}
+
+#secondary {
+  font-family: "Segoe UI";
+  background-color: #951e22;
+  border-radius: 0 4rem 4rem 0;
+  text-align: center;
+  width: 900px;
+}
+
+#secondary2 {
+  background-color: #951e22;
+  border-radius: 4rem 0rem 0rem 4rem;
+  text-align: center;
+  width: 900px;
+}
+
+#main .form-control {
+  border-radius: 10px;
+  font-size: 0.9em;
+}
+
+.form-group {
+  margin-top: 15px;
+}
+.btn {
+  text-transform: uppercase;
+  border-radius: 0.15rem;
+  width: 200px;
+  padding: 0.15rem 0.75rem;
+  margin: 30px auto;
+  font-family: "PT Sans", sans-serif;
+  letter-spacing: 2px;
+}
+
+.btn-primary {
+  font-family: "Segoe UI";
+  border-color: rgba(255, 255, 255, 0);
+  background-color: #951e22;
+}
+
+.btn-primary:hover {
+  border-color: 1px solid rgba(255, 255, 255, 0);
+  background-color: #fcf18ce8;
+  color: black;
+}
+
+#main .btn-primary {
+  width: 100%;
+  border-radius: 10px;
+}
+#secondary .btn-primary {
+  background: #f8f9fa4f;
+  color: #000;
+  border-radius: 10px;
+}
+
+#secondary .btn-primary:hover {
+  background: #fcf18ce8;
+  color: #000;
+  border-radius: 10px;
+}
+
+#secondary2 .btn-primary {
+  background: #f8f9fa4f;
+  color: #000;
+  border-radius: 10px;
+}
+
+#secondary2 .btn-primary:hover {
+  background: #fcf18ce8;
+  color: #000;
+  border-radius: 10px;
+}
+
+.modal-body label {
+  margin-bottom: 0;
+}
+
+div .modal-dialog {
+  display: flex;
+  justify-content: center;
+}
+
+.sec-content {
+  margin-top: 35%;
+  color: white;
+}
+.sec-content img {
+  width: 90%;
+  height: 90%;
+  margin-bottom: 10%;
+}
+/* End Login Page Styling */
+
+/* Start of events styling */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;800&display=swap");
+.container-fluid {
+  padding-right: 0;
+  padding-left: 0;
+}
+.events {
+  background-color: #951e22;
+  font-family: "Montserrat", sans-serif;
+}
+.container {
+  padding-bottom: 3rem;
+}
+img {
+
+	-webkit-box-reflect: below 2px
+		linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.3));
+	-webkit-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+
+
+}
+.is-one-quarter:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.event .column {
+  color: white;
+  font-weight: 800;
+  font-size: 30px;
+}
+.last {
+  margin-top: 6.5rem;
+}
+.featured_wrapper {
+
+	position: relative;
+}
+
+.featured_wrapper img {
+
+	width: 100%;
+	width: 100%;
+	height: 480px;
+  opacity: .5;
+	-o-object-fit: cover;
+	object-fit: cover;
+	-o-object-position: top;
+	object-position: top;
+}
+.title_wrapper {
+  position: absolute;
+  width: 100%;
+  left: 2rem;
+  bottom: 2rem;
+  padding: 20px 40px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.title_wrapper h1 {
+  width: 70%;
+}
+.top button {
+	background: #4D8AB5;
+	color: black;
+	font-size: 18px;
+	padding: 0.5rem 3rem;
+	outline: none;
+	border: 0 !important;
+}
+.top button:hover{
+  background: #68aad9;
+}
+.top a {
+  text-decoration: none;
+}
+
+#backTop{
+	background: #4D8AB5;
+	color: black;
+	font-size: 18px;
+	padding: 0.5rem 3rem;
+	outline: none;
+	border: 0 !important;
+}
+#backTop:hover{
+  background: #68aad9;
+}
+
+.backTop:hover {
+  text-decoration: none;
+}
+@media (max-width: 768px) {
+  .title_wrapper {
+    text-align: center;
+    left: 0;
+  }
+  .title_wrapper h1 {
+    font-size: 32px !important;
+    width: 100%;
+  }
+  .container {
+    padding: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .column.is-one-quarter {
+    width: 100%;
+    margin-bottom: 7rem;
+  }
+}
+
+
+  div .column.is-one-quarter {
+  margin-bottom: 45px;
+}
+
+.has-text-white {
+  font-size: 25px;
+}
+
+.is-one-quarter h1 {
+  font-size: 20px;
+  color: #ede263;
+  position: relative;
+  font-weight: 600;
+ 
+}
+
+.is-one-quarter p {
+  font-size: 15px;
+  color: white;
+  position: relative;
+  font-weight: 300;
+
+}
+
+/* End of events styling */
+
+/* Start Superyoga styling */
+
+.start-btn {
+  background-color: initial;
+  border-style: none;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Segoe UI";
+  font-size: 16px;
+  font-weight: 800;
+  min-height: 55px;
+  padding: 0px 50px;
+  position: relative;
+}
+
+.start-btn:before,
+.start-btn:after {
+  border-radius: 80px;
+}
+
+.start-btn:before {
+  background-image: linear-gradient(92.83deg, #ff7426 0, #f93a13 100%);
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -2;
+}
+
+.start-btn:after {
+  background-color: initial;
+  background-image: linear-gradient(#541a0f 0, #0c0d0d 100%);
+  bottom: 4px;
+  content: "";
+  display: block;
+  left: 4px;
+  overflow: hidden;
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  transition: all 100ms ease-out;
+  z-index: -1;
+}
+
+.start-btn:hover:not(:disabled):before {
+  background: linear-gradient(
+    92.83deg,
+    rgb(255, 116, 38) 0%,
+    rgb(249, 58, 19) 100%
+  );
+}
+
+.start-btn:hover:not(:disabled):after {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  transition-timing-function: ease-in;
+  opacity: 0;
+}
+
+.start-btn:active:not(:disabled) {
+  color: #ccc;
+}
+
+.start-btn:active:not(:disabled):before {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.2)
+    ),
+    linear-gradient(92.83deg, #ff7426 0, #f93a13 100%);
+}
+
+.start-btn:active:not(:disabled):after {
+  background-image: linear-gradient(#541a0f 0, #0c0d0d 100%);
+  bottom: 4px;
+  left: 4px;
+  right: 4px;
+  top: 4px;
+}
+
+.start-btn:disabled {
+  cursor: default;
+  opacity: 0.24;
+}
+
+.super_title_wrapper {
+  position: absolute;
+  top: 10rem;
+  width: 100%;
+  left: 2rem;
+  bottom: 2rem;
+  padding: 20px 40px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.super_title_wrapper h1 {
+  width: 70%;
+  padding-bottom: 10px;
+}
+
+/* ML model styling */
+
+#canvas {
+  position: absolute;
+  top: 25rem;
+  left: 2rem;
+  padding: 20px 40px;
+  height: 20rem;
+}
+
+#label-container {
+  position: absolute;
+  top: 30rem;
+  left: 25rem;
+  padding: 20px 40px;
+  font-family: "Segoe UI";
+  color:white;
+}
+
+/* End ML model styling */
+/* End super yoga styling */
+
+
+/* Start of landing page */
+header .masthead {
+    padding-top: 17rem;
+    padding-bottom: 12rem;
+    
+}
+
+header.masthead {
+  padding-top: 16.5rem;
+  padding-bottom: 12rem;
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.5)),
+    url("images/citybackdrop.png") top center;
+  background-color: black;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
+}
+
+.join button {
+	background: #4D8AB5;
+	color: black;
+	font-size: 20px;
+  font-weight: bold;
+	padding: 0.5rem 3rem;
+	outline: none;
+	border: 0 !important;
+  margin-right: 10px;
+  border-radius: 10px;
+  width: 150px;
+}
+.join button:hover{
+  background: #68aad9;
+}
+.join a {
+  text-decoration: none;
+}
+
+
+
+/* end of landing page */

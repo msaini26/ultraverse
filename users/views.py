@@ -96,6 +96,18 @@ def create_comment(request):
     logger.info('Event form template was rendered.')
     return render(request, 'event_form.html', context)
 
+def map(request):
+    return render(request, 'map.html')
+
+def events(request):
+    return render(request, 'events.html')
+
+def event(request):
+    return render(request, 'event.html')
+
+def superyoga(request):
+    return render(request, 'superyoga.html')
+
 # This is temporary for testing on backend
 def developer(request):
     events = Event.objects.order_by('date_posted').all()
