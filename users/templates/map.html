@@ -4,7 +4,7 @@
 {% block content %}
 
 <!-- ======= MapIntro Section ======= -->
-<section id="#mapIntro" class="d-flex align-items-center">
+<section id="mapIntro" class="d-flex align-items-center">
     <div class="container position-relative text-center text-lg-start" data-aos="zoom-in" data-aos-delay="100">
         <div class="row">
             <div class="col-lg-8">
@@ -20,5 +20,35 @@
     </div>
 </section><!-- End MapIntro -->
 
+<!-- ======= About Section ======= -->
+<section id="gmap" class="gmap">
+    <div class="container" data-aos="fade-up">
 
-    {% endblock %}
+        <div class="row">
+            <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="100">
+
+                <body onload="InitMap()">
+                    <div id="myMap"></div>
+                </body>
+            </div>
+
+        </div>
+    </div>
+</section><!-- End About Section -->
+
+<script type="text/javascript">
+    function InitMap()
+    {
+        var map = new atlas.Map('myMap', {
+            center: [-122.33, 47.6],
+            zoom: 12,
+            language: 'en-US',
+            authOptions: {
+                authType: 'subscriptionKey',
+                subscriptionKey: '6Pc2ofPLj3W-r_MaDDRj2juEygc3KwcUj8P8Wlix0Wk'
+            }
+        });
+   }
+</script>
+
+{% endblock %}
