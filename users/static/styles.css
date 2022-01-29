@@ -1,18 +1,10 @@
 .loginBackground {
-  /* background-color: #1E2639;
-    position:fixed;
-    padding:0;
-    margin:0;
-    left:0;
-
-    width: 100%;
-    height: 100%; */
-  /* display: flex; */
   display: inline-block;
   position: absolute;
   left: 0;
   background-color: #1e2639;
   width: 100%;
+  height: 100%;
 }
 
 body {
@@ -467,3 +459,48 @@ img {
 
 /* End ML model styling */
 /* End super yoga styling */
+
+
+/* Start of landing page */
+header .masthead {
+    padding-top: 17rem;
+    padding-bottom: 12rem;
+    
+}
+
+header.masthead {
+  padding-top: 16.5rem;
+  padding-bottom: 12rem;
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.5)),
+    url("images/citybackdrop.png") top center;
+  background-color: black;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
+}
+
+.join button {
+	background: #4D8AB5;
+	color: black;
+	font-size: 20px;
+  font-weight: bold;
+	padding: 0.5rem 3rem;
+	outline: none;
+	border: 0 !important;
+  margin-right: 10px;
+  border-radius: 10px;
+  width: 150px;
+}
+.join button:hover{
+  background: #68aad9;
+}
+.join a {
+  text-decoration: none;
+}
+
+
+
+/* end of landing page */

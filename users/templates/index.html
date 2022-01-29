@@ -2,6 +2,46 @@
 
 {% block content %}
 
-    <h1>Home</h1>
+    <!-- Masthead-->
+    <header class="masthead">
+        <div class="container">
+            <h1 class="masthead-subheading">WELCOME TO THE ULTRAVERSE!</h1>
+            <h4 class="masthead-heading text-uppercase">EXPERIENCE MOVIES TO THE FULLEST</h2>
+            <br>
+            <a href="{% url 'register' %}" class="join"><button class="button is-medium">JOIN</button></a>
+            <a href="{% url 'register' %}" class="join"><button class="button is-medium">ABOUT</button></a>
+        </div>
+    </header>
+
+    <div class="box">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="box-part text-center"> <i class="fa fa-google-plus fa-3x" aria-hidden="true"></i>
+                        <div class="title">
+                            <h3>Google</h3>
+                        </div>
+                        <div class="text"> <span>Follow us on google for future updates</span> </div> <a href="#">Learn More</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="box-part text-center"> <i class="fa fa-twitter fa-3x" aria-hidden="true"></i>
+                        <div class="title">
+                            <h3>Twitter</h3>
+                        </div>
+                        <div class="text"> <span>Follow us on twitter for future updates</span> </div> <a href="#">Learn More</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="box-part text-center"> <i class="fa fa-facebook fa-3x" aria-hidden="true"></i>
+                        <div class="title">
+                            <h3>Facebook</h3>
+                        </div>
+                        <div class="text"> <span>Follow us on facebook for future updates</span> </div> <a href="#">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 {% endblock %}
