@@ -98,8 +98,8 @@ def create_comment(request):
 
 # This is temporary for testing on backend
 def developer(request):
-    events = Event.objects.order_by('author').all()
-    comments = Comment.objects.order_by('author').all()
+    events = Event.objects.order_by('date_posted').all()
+    comments = Comment.objects.order_by('date_posted').all()
     
     context = {
         'events': events,
