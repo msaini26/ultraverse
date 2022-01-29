@@ -5,4 +5,42 @@
     <h1>Developer</h1>
     <h5>This is a temporary test page for backend.</h5>
 
+    <div>
+        <h2>User Data - Events</h2>
+        {% if events %}
+            {% for event in events %}
+                <ul>
+                    <li>Username: {{ event.author }}
+                        <ul>
+                            <li>Date_Posted: {{ event.date_posted }}</li>
+                            <li>Title: {{ event.title }}</li>
+                            <li>Description: {{ event.description }}</li>
+                            <li>Link: <a href="{{ event.link }}" target="_blank">Click Link</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            {% endfor %}
+        {% else %}
+            <p>No event data.</p>
+        {% endif %}
+    </div>
+
+    <div>
+        <h2>User Data - Comments</h2>
+        {% if comments %}
+            {% for comment in comments %}
+                <ul>
+                    <li>Username: {{ comment.author }}
+                        <ul>
+                            <li>Date_Posted: {{ comment.date_posted }}</li>
+                            <li>Comment: {{ comment.comment }}</li>
+                        </ul>
+                    </li>
+                </ul>
+            {% endfor %}
+        {% else %}
+            <p>No comment data.</p>
+        {% endif %}
+    </div>
+
 {% endblock %}
