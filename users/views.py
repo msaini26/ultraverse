@@ -13,11 +13,11 @@ def home(request):
     return render(request, 'index.html')
 
 def user_register(request):
-    # if request.user.is_authenticated:
-    #     logger.info('Register template was not rendered. User was redirected to home.')
-    #     return redirect('home')
-    # else:
-    #     form = UserRegisterForm()
+    if request.user.is_authenticated:
+        logger.info('Register template was not rendered. User was redirected to home.')
+        return redirect('home')
+    else:
+        form = UserRegisterForm()
     
         if request.method == 'POST':
             # Django default UserCreationForm handles hashing and making sure user doesn't already exist
@@ -38,10 +38,10 @@ def user_register(request):
         return render(request, 'register.html', context)
 
 def user_login(request):
-    # if request.user.is_authenticated:
-    #     logger.info('Login template was not rendered. User was redirected to home.')
-    #     return redirect('home')
-    # else:
+    if request.user.is_authenticated:
+        logger.info('Login template was not rendered. User was redirected to home.')
+        return redirect('home')
+    else:
         if request.method == 'POST':
             username = request.POST.get('username')
             password = request.POST.get('password')
