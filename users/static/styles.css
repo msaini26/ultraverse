@@ -18,6 +18,12 @@ ul {
 .nav_elements {
   text-decoration: none;
 }
+
+#logo {
+  width: 175px;
+  padding: 5px;
+}
+
 /* End Nav Bar Styling */
 
 /* Login Page Styling */

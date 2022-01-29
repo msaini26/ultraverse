@@ -1,16 +1,15 @@
 <!-- Navbar is being inherited --> 
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="nav-item nav-link active" href="{% url 'home' %}"><img class="navbar-brand" id="logo" src="static/ultraverse-logo.png"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-item nav-link active" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
-        <a class="nav-item nav-link" href="{% url 'events' %}">Events</a>
-        <a class="nav-item nav-link" href="{% url 'login' %}">Login</a>
-        <a class="nav-item nav-link disabled" href="#">Disabled</a>
+        <a class="nav-item nav-link active" href="{% url 'home' %}">HOME</a>
+        <a class="nav-item nav-link" href="{% url 'events' %}">EVENTS</a>
+        <a class="nav-item nav-link" href="{% url 'login' %}">LOGIN</a>
       </div>
     </div>
-  </nav>
+</nav>
