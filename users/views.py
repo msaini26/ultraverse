@@ -58,6 +58,11 @@ def user_login(request):
         
         logger.info('Login template was rendered.')
         return render(request, 'login.html')
+    
+def user_logout(request):
+    logout(request)
+    logger.info('User has been logged out and redirected to login.')
+    return redirect('login')
 
 # This is temporary for testing on backend
 def developer(request):
