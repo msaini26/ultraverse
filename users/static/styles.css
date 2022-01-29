@@ -7,6 +7,7 @@ to overwrite the staticfiles directory located in main directory */
 body {
     background-color: #97AABD;
     margin: 0;
+    font-family: "Segoe UI";
 }
 
 /* Nav Bar Styling */
