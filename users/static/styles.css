@@ -15,14 +15,31 @@ ul {
     padding: 0;
 }
 
+nav {
+  display:inline-block;
+}
+
 .nav_elements {
   text-decoration: none;
 }
 
+.nav-link {
+  padding: 0.5rem 0rem;
+}
+
 #logo {
   width: 175px;
-  padding: 5px;
 }
+
+/* Nav toggle button */
+#toggle {
+  border-color: #f8f9fa;
+}
+
+#toggle:active {
+  border-color: #f8f9fa;
+}
+/* Nav toggle button */
 
 /* End Nav Bar Styling */
 
