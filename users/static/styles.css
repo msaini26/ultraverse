@@ -18,7 +18,7 @@
 }
 
 body {
-    background-color: #97AABD;
+    background-color: #951E22;
     margin: 0;
     font-family: "Segoe UI";
 }
@@ -197,3 +197,92 @@ nav {
     margin-bottom: 10%;
   }
 /* End Login Page Styling */
+
+/* Start of events styling */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;800&display=swap");
+
+.events {
+	background-color: #951E22;
+	font-family: "Montserrat", sans-serif;
+}
+.container {
+	padding-bottom: 3rem;
+	
+}
+img {
+	-webkit-box-reflect: below 4px
+		linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.3));
+	-webkit-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+.is-one-quarter:hover {
+	-webkit-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	transform: scale(1.1);
+}
+.event .column {
+	color: white;
+	font-weight: 800;
+	font-size: 30px;
+}
+.last {
+	margin-top: 6.5rem;
+}
+.featured_wrapper {
+	position: relative;
+}
+.featured_wrapper img {
+	width: 100%;
+	width: 100%;
+	height: 350px;
+	-o-object-fit: cover;
+	object-fit: cover;
+	-o-object-position: top;
+	object-position: top;
+}
+.title_wrapper {
+	position: absolute;
+	width: 100%;
+	left: 2rem;
+	bottom: 2rem;
+	padding: 20px 40px;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.title_wrapper h1 {
+	width: 70%;
+}
+.top button {
+	background: #f40612 !important;
+	color: #fff !important;
+	font-size: 18px;
+	padding: 0.5rem 3rem;
+	outline: none;
+	border: 0 !important;
+}
+@media (max-width: 768px) {
+	.title_wrapper {
+		text-align: center;
+		left: 0;
+	}
+	.title_wrapper h1 {
+		font-size: 32px !important;
+		width: 100%;
+	}
+	.container {
+		padding: 20px;
+	}
+}
+@media (max-width: 480px) {
+	.column.is-one-quarter  {
+		width: 100%;
+		margin-bottom: 7rem;
+	}
+}
+
+  div .column.is-one-quarter {
+  margin-bottom: 150px;
+}
+
+/* End of events styling */
