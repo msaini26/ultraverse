@@ -1,14 +1,48 @@
 
+<<<<<<< HEAD
 .loginBackground {
     padding: 100px;
     background-color: #1E2639;
+=======
+
+body {
+    background-color: #97AABD;
+    margin: 0;
+    font-family: "Segoe UI";
+>>>>>>> be20b033f6f08b7e38b97d97a9d548e30c7f7a4d
 }
 /* Nav Bar Styling */
 ul {
-    list-style-type:none;
     margin: 0;
     padding: 0;
 }
+
+nav {
+  display:inline-block;
+}
+
+.nav_elements {
+  text-decoration: none;
+}
+
+.nav-link {
+  padding: 0.5rem 0rem;
+}
+
+#logo {
+  width: 175px;
+}
+
+/* Nav toggle button */
+#toggle {
+  border-color: #f8f9fa;
+}
+
+#toggle:active {
+  border-color: #f8f9fa;
+}
+/* Nav toggle button */
+
 /* End Nav Bar Styling */
 
 /* Login Page Styling */
