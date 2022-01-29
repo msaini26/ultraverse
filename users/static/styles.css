@@ -18,3 +18,16 @@ position: relative;
   border-radius: 10px;
 }
 /* End Login Page Styling */
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+#hero {
+    width: 100%;
+    height: 100vh;
+    background: url("../img/hero-bg.jpg") top center;
+    background-size: cover;
+    position: relative;
+    padding: 0;
+  }
+
