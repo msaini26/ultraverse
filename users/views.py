@@ -64,6 +64,38 @@ def user_logout(request):
     logger.info('User has been logged out and redirected to login.')
     return redirect('login')
 
+def create_event(request):
+    form = EventForm()
+    if request.method == 'POST':
+        form = EventForm(request.POST)
+        logger.info('Test Print: ', request.POST)
+        if form.is_valid:
+            form.save()
+            logger.info('Event data was posted.')
+            logger.info('Redirecting to home.')
+            return redirect('home')
+    
+    context = {'form':form}
+    
+    logger.info('Event form template was rendered.')
+    return render(request, 'event_form.html', context)
+
+def create_comment(request):
+    form = CommentForm()
+    if request.method == 'POST':
+        form = CommentForm(request.POST)
+        logger.info('Test Print: ', request.POST)
+        if form.is_valid:
+            form.save()
+            logger.info('Event data was posted.')
+            logger.info('Redirecting to home.')
+            return redirect('home')
+    
+    context = {'form':form}
+    
+    logger.info('Event form template was rendered.')
+    return render(request, 'event_form.html', context)
+
 # This is temporary for testing on backend
 def developer(request):
     events = Event.objects.order_by('author').all()

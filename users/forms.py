@@ -14,9 +14,9 @@ class UserRegisterForm(UserCreationForm):
 class EventForm(forms.ModelForm):
     class Meta:
         model = Event
-        fields = ['title', 'description', 'link']
+        fields = ['author', 'title', 'description', 'link']
 
 class CommentForm(forms.ModelForm):
     class Meta:
         model = Comment
-        fields = ['comment']
+        fields = ['author', 'comment']

@@ -9,7 +9,13 @@
     <span> Hello, {{ request.user }} </span>
     {% endif %}
 
-    <span><a class="nav-link text-secondary" href="{% url 'logout' %}">Logout</a></span>
+    <br><br>
+    <span><a href="{% url 'logout' %}">Logout</a></span>
+    <br>
+    <span><a href="{% url 'create_event' %}">Create Event</a></span>
+    <br>
+    <span><a href="{% url 'create_comment' %}">Create Comment</a></span>
+    <br><br>
 
     <div>
         <h2>User Data - Events</h2>
