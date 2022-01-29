@@ -14,9 +14,9 @@ class UserRegisterForm(UserCreationForm):
 
 class EventForm(forms.ModelForm):
     
-    def __init__(self, *args, **kwargs):
-        super(EventForm, self).__init__(*args, **kwargs)
-        self.fields['author'].disabled = True
+    # def __init__(self, *args, **kwargs):
+    #     super(EventForm, self).__init__(*args, **kwargs)
+    #     self.fields['author'].disabled = True
     class Meta:
         model = Event
         fields = ['author', 'title', 'description', 'link']
