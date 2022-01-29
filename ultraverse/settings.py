@@ -28,6 +28,38 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
+# This is a LOGGING dict
+# Doc: https://docs.djangoproject.com/en/dev/howto/logging/#
+LOGGING = {
+    'version': 1,                       # the dictConfig format version
+    'disable_existing_loggers': False,  # retain the default loggers
+    'handlers': {
+        'file': {
+            'class': 'logging.FileHandler',
+            'filename': 'general.log',
+            'level': 'DEBUG',
+            'formatter': 'verbose',
+        },
+    },
+    'loggers': {
+    'my_app.views': {
+        'level': 'DEBUG',
+        'handlers': ['file'],
+        },
+    },
+    'formatters': {
+        'verbose': {
+            'format': '{name} {levelname} {asctime} {module} {process:d} {thread:d} {message}',
+            'style': '{',
+        },
+        'simple': {
+            'format': '{levelname} {message}',
+            'style': '{',
+        },
+    },
+}
+
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -106,6 +138,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
+# https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 TIME_ZONE = 'US/Eastern'
 
 USE_I18N = True
