@@ -1,3 +1,8 @@
+
+body {
+    background-color: #97AABD;
+    margin: 0;
+}
 /* Nav Bar Styling */
 ul {
     list-style-type:none;
@@ -11,9 +16,9 @@ ul {
 position: relative;
   /* margin: auto;
   overflow: hidden; */
-  width: 520px;
-  height: 350px;
-  background: white;
+  width: 820px;
+  height: 650px;
+  background: pink;
   box-shadow: 5px 5px 15px rgba(#0b3f72, 1);
   border-radius: 10px;
 }
