@@ -18,3 +18,6 @@ def events(request):
 
 def event(request):
     return render(request, 'event.html')
+
+def superyoga(request):
+    return render(request, 'superyoga.html')

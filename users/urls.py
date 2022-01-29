@@ -8,5 +8,6 @@ urlpatterns = [
     path('login/', views.login, name='login'),
     path('map/', views.map, name='map'),
     path('events/', views.events, name='events'),
-    path('event/', views.event, name='event')
+    path('event/', views.event, name='event'),
+    path('superyoga/', views.superyoga, name='superyoga')
 ]
