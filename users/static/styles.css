@@ -84,6 +84,7 @@ nav {
   }
   
   .column#main {
+    font-family: "Segoe UI";
     flex: 75%;
     padding: 50px;
     margin-top: 30px;
@@ -91,6 +92,7 @@ nav {
   }
   
   #secondary {
+    font-family: "Segoe UI";
     background-color: #951E22;
     border-radius: 0 4rem 4rem 0;
     text-align: center;
@@ -124,6 +126,7 @@ nav {
   }
   
   .btn-primary {
+    font-family: "Segoe UI";
     border-color: rgba( 255, 255, 255, 0);
     background-color: #951E22;
     
