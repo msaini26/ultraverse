@@ -6,6 +6,19 @@ ul {
 }
 /* End Nav Bar Styling */
 
+/* Login Page Styling */
+.loginContainer {
+position: relative;
+  /* margin: auto;
+  overflow: hidden; */
+  width: 520px;
+  height: 350px;
+  background: white;
+  box-shadow: 5px 5px 15px rgba(#0b3f72, 1);
+  border-radius: 10px;
+}
+/* End Login Page Styling */
+
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
@@ -17,3 +30,4 @@ ul {
     position: relative;
     padding: 0;
   }
+
