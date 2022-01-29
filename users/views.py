@@ -1,7 +1,9 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
+
 from .models import *
+from .forms import UserRegisterForm, EventForm, CommentForm
 
 import logging
 logger = logging.getLogger('django')
@@ -10,10 +12,32 @@ logger = logging.getLogger('django')
 def home(request):
     return render(request, 'index.html')
 
-def register(request):
-    return render(request, 'register.html')
+def user_register(request):
+    # if request.user.is_authenticated:
+    #     logger.info('Register template was not rendered. User was redirected to home.')
+    #     return redirect('home')
+    # else:
+    #     form = UserRegisterForm()
+    
+        if request.method == 'POST':
+            # Django default UserCreationForm handles hashing and making sure user doesn't already exist
+            form = UserRegisterForm(request.POST)
+            if form.is_valid():
+                form.save()
+                username = form.cleaned_data.get('username')
+                messages.success(request, username + f' has been created! You are now able to log in.')
+                logger.info('New user data saved.')
+                logger.info('Redirecting to login page.')
+                return redirect('login')
+        else: 
+            form = UserRegisterForm()
+        
+        context = {'form':form}
+        
+        logger.info('Register template was rendered.')
+        return render(request, 'register.html', context)
 
-def login(request):
+def user_login(request):
     # if request.user.is_authenticated:
     #     logger.info('Login template was not rendered. User was redirected to home.')
     #     return redirect('home')

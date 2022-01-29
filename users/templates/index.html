@@ -3,5 +3,8 @@
 {% block content %}
 
     <h1>Home</h1>
+    {% if request.user.is_authenticated %}
+    <span> Hello, {{ request.user }} </span>
+    {% endif %}
 
 {% endblock %}
