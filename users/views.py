@@ -72,8 +72,8 @@ def create_event(request):
         if form.is_valid:
             form.save()
             logger.info('Event data was posted.')
-            logger.info('Redirecting to home.')
-            return redirect('home')
+            logger.info('Redirecting to events.')
+            return redirect('events')
     
     context = {'form':form}
     
