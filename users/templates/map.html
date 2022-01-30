@@ -41,7 +41,7 @@
         var map = new atlas.Map('myMap', {
             //style: 'grayscale_light',
             center: [-84.3880, 33.7490],
-            zoom: 7,
+            zoom: 10,
             language: 'en-US',
             authOptions: {
                 authType: 'subscriptionKey',
@@ -96,10 +96,18 @@
             map.markers.add(marker);
 
             marker = new atlas.HtmlMarker({
+                htmlContent: '<img src="https://www.svgrepo.com/show/53522/captain-america-adamantium-shield.svg" width="40" height="47" viewBox="0 0 30 37" xml:space="preserve"><rect x="0" y="0" rx="8" ry="8" width="30" height="30" fill="{color}"/><polygon fill="{color}" points="10,29 20,29 15,37 10,29"/><text x="15" y="20" style="font-size:16px;font-family:arial;fill:#ffffff;" text-anchor="middle">{text}</text></img>',
+                position: [-84.398442, 33.652590]
+            });
+            
+            //Create a HTML marker and add it to the map.
+            map.markers.add(marker);
+
+            marker = new atlas.HtmlMarker({
                 htmlContent: '<img src="https://www.svgrepo.com/show/155519/spiderman.svg" width="40" height="47" viewBox="0 0 30 37" xml:space="preserve"><rect x="0" y="0" rx="8" ry="8" width="30" height="30" fill="{color}"/><polygon fill="{color}" points="10,29 20,29 15,37 10,29"/><text x="15" y="20" style="font-size:16px;font-family:arial;fill:#ffffff;" text-anchor="middle">{text}</text></img>',
                 position: [-84.407460, 33.595740],
                 popup: new atlas.Popup({
-                    content: '<div style="padding:10px"><a href="../spiderman/#spiderman">Spiderman: Homecoming</a><br>5851 GA-85, Riverdale, GA 30274</div>',
+                    content: '<div style="padding:10px"><a href="../spiderman">Spiderman: Homecoming</a><br>5851 GA-85, Riverdale, GA 30274</div>',
                     pixelOffset: [0, -30]
                 })
             });
