@@ -2,19 +2,11 @@
 
 {% block content %}
 
-<header class="masthead2">
-    <div class="container">
-        <h1 class="masthead-subheading">CREATE AN EVENT</h1>
-        
-    </div>
-</header>
-
-    <h1>Event Form</h1>
+    <h1>Comment Form</h1>
     <form action="" method="POST">
         {% csrf_token %}
         {{ form.as_p }}
         <input type="submit" name="Submit">
     </form>
-
 
 {% endblock %}

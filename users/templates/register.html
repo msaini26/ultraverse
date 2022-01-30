@@ -2,6 +2,51 @@
 
 {% block content %}
 
-    <h1>Register</h1>
+  
+
+    <!-- Modal -->
+<div class="loginBackground" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="column" id="main">
+            <h1>Sign Up </h1>
+            <h3>Create an account and join watch parties!</h3>
+            <form action="" method="POST">
+              {% csrf_token %}
+              <div class="form-group">
+                <label for="exampleInputName">Username</label>
+                <input type="username" class="form-control" id="exampleInputName" placeholder="Username" name="username">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1">E-mail </label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="E-mail" name="email">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="InputPassword1" placeholder="Password" name="password1">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Confirm Password</label>
+                <input type="password" class="form-control" id="InputPassword2" placeholder="Confirm Password" name="password2">
+              </div>
+              <button type="submit" class="btn btn-primary">Sign Up</button>
+            </form>
+            {{ form.errors }}
+          </div>
+          
+          <div class="column" id="secondary">
+            <div class="sec-content">
+              <img src="/static/images/cityStars.PNG" alt="city with stars">
+              <h2>Welcome Back!</h2>
+              <h3>Login to access your watch parties!</h3>
+              <a href="{% url 'login' %}"><button type="button" class="btn btn-primary">Login</button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
 
 {% endblock %}
