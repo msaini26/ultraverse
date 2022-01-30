@@ -9,6 +9,7 @@ class Event(models.Model):
     title = models.CharField(max_length=100, null=False, blank=False, default='')
     description = models.CharField(max_length=350, null=False, blank=False, default='')
     link = models.CharField(max_length=300, null=False, blank=False, default='')
+    date_hosted = models.CharField(max_length=300, null=False, blank=False, default='')
     date_posted = models.DateTimeField(default=timezone.now)
     
     def __str__(self):

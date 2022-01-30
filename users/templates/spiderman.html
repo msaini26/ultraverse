@@ -1,0 +1,144 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<!-- Vue JS -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js'></script>
+<!-- jQuery -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+
+
+<!-- ======= Spiderman Carousel Section ======= -->
+<section id="spiderman" class="spiderman">
+  <div class="container" data-aos="fade-up">
+    <h1 style="text-align: center;">5851 GA-85, Riverdale, GA 30274</h1>
+    <br>
+    <div class="row">
+      <div class="col-12 col-md-8">
+        <div class="card text-white bg-dark mb-3" style="width: 100%;">
+          <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <iframe width="900" height="450" src="https://www.youtube.com/embed/frIhUcKin-A"
+                  title="YouTube video player" frameborder="5"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Spiderman: Homecoming</h5>
+                  <p>Parachute Scene</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <iframe width="900" height="450" src="https://www.youtube.com/embed/7b4Af0h12iA"
+                  title="YouTube video player" frameborder="5"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Spiderman: No Way Home</h5>
+                  <p>Alternate Ending, Deleted Scenes, and Marvel Easter Eggs</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <iframe width="900" height="450" src="https://www.youtube.com/embed/ICFcl8E4Vx8"
+                  title="YouTube video player" frameborder="5"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>tom holland &#60;3 </h5>
+                  <p>just a little appreciation for this cutie</p>
+                </div>
+              </div>
+
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Spiderman</h3>
+            <p class="card-text">Sometimes student, sometimes scientist and sometimes photographer, Peter Parker is a
+              full-time superhero better known as the web-slinging and wall-crawling Spider-Man.<br> <br>
+              <b>Remember, with great power comes great responsibility.</b>
+            </p>
+            <a href="../map" class="btn btn-light">Explore More</a>
+          </div>
+        </div>
+        <br>
+      </div>
+
+      <div class="col-3 col-md-4">
+      <!-- Comment Section-->
+      <section id="comments">
+          <div class="commentcontainer">
+            <div class="row">
+              <div class="col-9">
+                <div class="comment">
+                  <p><b>Tony Stark: </b>I love you 3000</p>
+                  <p><b>Stephen Strange: </b>Sigh... He's just a kid</p>
+                  <p><b>MJ: </b>Haha, he's cute who is he?</p>
+                  <p><b>Peter Parker: </b>Damn no one knows me :( </p>
+                  <p><b>Rocket Raccoon: </b>*raccoon noises*</p>
+                  <p><b>Baby Groot:</b>i am groot!</p>
+                  <p v-for="items in item" v-text="items"></p>
+                </div><!--End Comment-->
+              </div><!--End col -->
+            </div><!-- End row -->
+            <div class="row">
+              <p>____________________</p>
+              <h5>Join the chat!</h5>
+              <div class="col-6">
+                <textarea type="text" class="input" rows="4" cols="35" placeholder="Say hi" v-model="newItem"
+                  @keyup.enter="addItem()"> </textarea>
+                  <button type="submit" class="btn btn-dark" v-on:click="addItem()">Send</button>
+              </div><!-- End col -->
+            </div><!--End Row -->
+          </div><!--End Container -->
+      </section><!-- End of Comment Section-->
+    </div>
+  </div>
+</section><!-- End Spiderman Section -->
+</div>
+
+<script>
+  $(document).ready(function () {
+
+    $(".primaryContained").on('click', function () {
+      $(".comment").addClass("commentClicked");
+    });//end click
+    $("textarea").on('keyup.enter', function () {
+      $(".comment").addClass("commentClicked");
+    });//end keyup
+  });//End Function
+  new Vue({
+    el: "#comments",
+    data: {
+      title: 'Add a comment',
+      newItem: '',
+      item: [],
+    },
+    methods: {
+      addItem(user) {
+        this.item.push("Carrie Lu: " + this.newItem);
+        this.newItem = "";
+      }
+    }
+
+  });
+</script>
+
+{% endblock %}

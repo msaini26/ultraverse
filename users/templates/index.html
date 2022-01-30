@@ -10,36 +10,36 @@
             <h4 class="masthead-heading text-uppercase">EXPERIENCE MOVIES TO THE FULLEST</h2>
             <br>
             <a href="{% url 'register' %}" class="join"><button class="button is-medium">JOIN</button></a>
-            <a href="{% url 'register' %}" class="join"><button class="button is-medium">ABOUT</button></a>
+            <a href="#about" class="join"><button class="button is-medium">ABOUT</button></a>
         </div>
     </header>
 
     <div class="box">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                <div id="about" class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                     <div class="box-part text-center"> 
                         <i class="fas fa-camera"></i>
                         <div class="title">
-                            <h3>Google</h3>
+                            <h3>Watch Parties</h3>
                         </div>
-                        <div class="text"> <span>Follow us on google for future updates</span> </div> <a href="#">Learn More</a>
+                        <div class="text"> <span>Join people around the world and watch amazing movies</span>  </div> <br>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                     <div class="box-part text-center"> <i class="fa fa-twitter fa-3x" aria-hidden="true"></i>
                         <div class="title">
-                            <h3>Twitter</h3>
+                            <h3>Superyoga</h3>
                         </div>
-                        <div class="text"> <span>Follow us on twitter for future updates</span> </div> <a href="#">Learn More</a>
+                        <div class="text"> <span>Take a break from watching and stretch into some super hero yoga poses</span> </div> <br>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                     <div class="box-part text-center"> <i class="fa fa-facebook fa-3x" aria-hidden="true"></i>
                         <div class="title">
-                            <h3>Facebook</h3>
+                            <h3>Movie Map</h3>
                         </div>
-                        <div class="text"> <span>Follow us on facebook for future updates</span> </div> <a href="#">Learn More</a>
+                        <div class="text"> <span>Find the movies filmed in Georgia and see their deleted scences, film scenes, and comment to interact with others</span> </div> 
                     </div>
                 </div>
             </div>
@@ -57,58 +57,44 @@
             <div class="row">
                 <div class="col-lg-3">
                     <div class="team-member">
-                        <img class="mx-auto rounded-circle" src="assets/img/team/1.jpg" alt="..." />
+                        <a href="https://www.linkedin.com/in/carrielu02/"><img class="mx-auto rounded-circle" src="static/images/spidermanIcon.png" alt="Spiderman Icon" /></a>
                         <h4>Carrie Lu</h4>
                         <p class="text-muted">Frontend and Azure Maps</p>
                     </div>
                 </div>
                 <div class="col-lg-3">
                     <div class="team-member">
-                        <img class="mx-auto rounded-circle" src="assets/img/team/2.jpg" alt="..." />
+                        <a href="https://www.linkedin.com/in/zaina-shawar/"><img class="mx-auto rounded-circle" src="static/images/ironmanIcon.png" alt="IronMan Icon" /></a>
                         <h4>Zaina Shawar</h4>
                         <p class="text-muted">Frontend and ML</p>
                     </div>
                 </div>
                 <div class="col-lg-3">
                     <div class="team-member">
-                        <img class="mx-auto rounded-circle" src="assets/img/team/3.jpg" alt="..." />
+                        <a href="https://www.linkedin.com/in/cassjs/
+                        "><img class="mx-auto rounded-circle" src="static/images/loki.png" alt="Loki Icon" /></a>
                         <h4>Jessica Cassidy</h4>
-                        <p class="text-muted">Backend Developer</p>
+                        <p class="text-muted">Backend and Azure</p>
                     </div>
                 </div>
                 <div class="col-lg-3">
                     <div class="team-member">
-                        <img class="mx-auto rounded-circle" src="assets/img/team/3.jpg" alt="..." />
+                        <a href="https://www.linkedin.com/in/mansi-saini26/"><img class="mx-auto rounded-circle" src="static/images/grootIcon.png" alt="..." /></a>
                         <h4>Mansi Saini</h4>
                         <p class="text-muted">Frontend and ML</p>
                     </div>
+                </div>
+                <div class=centerButton>
+                    <a href="{% url 'register' %}" class="backTop"><button id="backTop2" class="button is-medium">Join</button></a>
                 </div>
             </div>
             
         </div>
     </section>
-
-    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img class="d-block w-100" src="/static/images/avengers.jpg" alt="First slide">
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="/static/images/citybackdrop.png" alt="Second slide">
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="/static/images/ultraverse-logo.png" alt="Third slide">
-          </div>
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
+    <div class="carousel-item active">
+        <img class="d-block w-100 landingpageLogo" src="/static/images/ultraverse-logo.png" alt="First slide">
       </div>
 
+    
     
 {% endblock %}

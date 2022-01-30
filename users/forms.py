@@ -19,7 +19,7 @@ class EventForm(forms.ModelForm):
     #     self.fields['author'].disabled = True
     class Meta:
         model = Event
-        fields = ['author', 'title', 'description', 'link']
+        fields = ['title', 'description', 'link', 'date_hosted']
 
 
 class CommentForm(forms.ModelForm):
