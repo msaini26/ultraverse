@@ -125,6 +125,17 @@
 
 
 </div>
-
+<h1>All Event Data</h1>
+{% if events %}
+{% for event in events %}
+	<p>Title: Title: {{ event.title }}</p>
+	<p>Hosted By: {{ event.author }}</p>
+	<p>Description: {{ event.description }}</p>
+	<p>Link: <a href="{{ event.link }}" target="_blank">Link</a>
+	<br><br>
+{% endfor %}
+{% else %}
+	<p>No event data in database.</p>
+{% endif %}
 
 {% endblock %}
