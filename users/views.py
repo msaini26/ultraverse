@@ -21,3 +21,6 @@ def event(request):
 
 def superyoga(request):
     return render(request, 'superyoga.html')
+
+def spiderman(request):
+    return render(request, 'spiderman.html')

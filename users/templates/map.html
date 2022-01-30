@@ -8,21 +8,21 @@
     <div class="container position-relative text-center text-lg-start" data-aos="zoom-in" data-aos-delay="100">
         <div class="row">
             <div class="col-lg-8">
-                <h1>Welcome to the <span>GCU</span></h1>
+                <h1>Welcome to the <span>MCU!</span></h1>
                 <h2>Explore this limitless universe from Georgia, USA!</h2>
             </div>
             <div class="col-lg-4 d-flex align-items-center justify-content-center position-relative" data-aos="zoom-in"
                 data-aos-delay="200">
-                <a href="#gmap" class="glightbox play-btn"></a>
+                <a href="#azuremap" class="glightbox play-btn"></a>
             </div>
 
         </div>
     </div>
 </section><!-- End MapIntro -->
 
-<!-- ======= About Section ======= -->
-<section id="gmap" class="gmap">
-    <div class="container" data-aos="fade-up">
+<!-- ======= AzureMap Section ======= -->
+<section id="azuremap" class="azuremap">
+    <div class="azuremap-container" data-aos="fade-up">
 
         <div class="row">
             <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="100">
@@ -34,21 +34,94 @@
 
         </div>
     </div>
-</section><!-- End About Section -->
+</section><!-- End AzureMap Section -->
 
 <script type="text/javascript">
-    function InitMap()
-    {
+    function InitMap() {
         var map = new atlas.Map('myMap', {
-            center: [-122.33, 47.6],
-            zoom: 12,
+            //style: 'grayscale_light',
+            center: [-84.3880, 33.7490],
+            zoom: 7,
             language: 'en-US',
             authOptions: {
                 authType: 'subscriptionKey',
                 subscriptionKey: '6Pc2ofPLj3W-r_MaDDRj2juEygc3KwcUj8P8Wlix0Wk'
             }
         });
-   }
+
+        var marker;
+
+        //Wait until the map resources are ready.
+        map.events.add('ready', function () {
+
+            marker = new atlas.HtmlMarker({
+                htmlContent: '<img src="https://www.svgrepo.com/show/155519/spiderman.svg" width="40" height="47" viewBox="0 0 30 37" xml:space="preserve"><rect x="0" y="0" rx="8" ry="8" width="30" height="30" fill="{color}"/><polygon fill="{color}" points="10,29 20,29 15,37 10,29"/><text x="15" y="20" style="font-size:16px;font-family:arial;fill:#ffffff;" text-anchor="middle">{text}</text></img>',
+                position: [-84.370758, 33.780739]
+            });
+
+
+            //Create a HTML marker and add it to the map.
+            map.markers.add(marker);
+
+            marker = new atlas.HtmlMarker({
+                htmlContent: '<img src="https://www.svgrepo.com/show/60972/loki.svg" width="40" height="47" viewBox="0 0 30 37" xml:space="preserve"><rect x="0" y="0" rx="8" ry="8" width="30" height="30" fill="{color}"/><polygon fill="{color}" points="10,29 20,29 15,37 10,29"/><text x="15" y="20" style="font-size:16px;font-family:arial;fill:#ffffff;" text-anchor="middle">{text}</text></img>',
+                position: [-84.384960, 33.761580]
+            });
+
+            //Create a HTML marker and add it to the map.
+            map.markers.add(marker);
+
+            marker = new atlas.HtmlMarker({
+                htmlContent: '<img src="https://www.svgrepo.com/show/60972/loki.svg" width="40" height="47" viewBox="0 0 30 37" xml:space="preserve"><rect x="0" y="0" rx="8" ry="8" width="30" height="30" fill="{color}"/><polygon fill="{color}" points="10,29 20,29 15,37 10,29"/><text x="15" y="20" style="font-size:16px;font-family:arial;fill:#ffffff;" text-anchor="middle">{text}</text></img>',
+                position: [-84.277300, 33.807980]
+            });
+            
+            //Create a HTML marker and add it to the map.
+            map.markers.add(marker);
+
+            marker = new atlas.HtmlMarker({
+                htmlContent: '<img src="https://www.svgrepo.com/show/322290/falcon-moon.svg" width="40" height="47" viewBox="0 0 30 37" xml:space="preserve"><rect x="0" y="0" rx="8" ry="8" width="30" height="30" fill="{color}"/><polygon fill="{color}" points="10,29 20,29 15,37 10,29"/><text x="15" y="20" style="font-size:16px;font-family:arial;fill:#ffffff;" text-anchor="middle">{text}</text></img>',
+                position: [-84.329180, 33.756390]
+            });
+            
+            //Create a HTML marker and add it to the map.
+            map.markers.add(marker);
+
+            marker = new atlas.HtmlMarker({
+                htmlContent: '<img src="https://www.svgrepo.com/show/28898/puma.svg" width="40" height="47" viewBox="0 0 30 37" xml:space="preserve"><rect x="0" y="0" rx="8" ry="8" width="30" height="30" fill="{color}"/><polygon fill="{color}" points="10,29 20,29 15,37 10,29"/><text x="15" y="20" style="font-size:16px;font-family:arial;fill:#ffffff;" text-anchor="middle">{text}</text></img>',
+                position: [-84.3968149, 33.7581066]
+            });
+            
+            //Create a HTML marker and add it to the map.
+            map.markers.add(marker);
+
+            marker = new atlas.HtmlMarker({
+                htmlContent: '<img src="https://www.svgrepo.com/show/155519/spiderman.svg" width="40" height="47" viewBox="0 0 30 37" xml:space="preserve"><rect x="0" y="0" rx="8" ry="8" width="30" height="30" fill="{color}"/><polygon fill="{color}" points="10,29 20,29 15,37 10,29"/><text x="15" y="20" style="font-size:16px;font-family:arial;fill:#ffffff;" text-anchor="middle">{text}</text></img>',
+                position: [-84.407460, 33.595740],
+                popup: new atlas.Popup({
+                    content: '<div style="padding:10px"><a href="../spiderman/#spiderman">Spiderman: Homecoming</a><br>5851 GA-85, Riverdale, GA 30274</div>',
+                    pixelOffset: [0, -30]
+                })
+            });
+
+            map.events.add('click', marker, () => {
+                marker.togglePopup();
+            });
+
+            //Create a HTML marker and add it to the map.
+            map.markers.add(marker);
+            
+
+        });
+
+        function UpdateMarkerOptions() {
+            //Update the marker options with a random color and text value.
+            marker.setOptions({
+                color: 'rgb(' + (Math.random() * 255) + ',' + (Math.random() * 255) + ',' + (Math.random() * 255) + ')',
+                text: Math.round(Math.random() * 100) + ''
+            });
+        }
+    }
 </script>
 
 {% endblock %}

@@ -9,5 +9,6 @@ urlpatterns = [
     path('map/', views.map, name='map'),
     path('events/', views.events, name='events'),
     path('event/', views.event, name='event'),
-    path('superyoga/', views.superyoga, name='superyoga')
+    path('superyoga/', views.superyoga, name='superyoga'),
+    path('spiderman/', views.spiderman, name='spiderman')
 ]
