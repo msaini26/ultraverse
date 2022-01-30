@@ -28,7 +28,7 @@
 		<div class="column is-one-quarter">
 			<img src="/static/images/spidermanNoWayHome.jpg">
             <h1>Spiderman: No Way Home</h1>
-            <p>Hosted By: Zaina Shawar</p>
+            <p>Hosted By: {{ request.user }}</p>
             <p>Description: Join us and watch Peter Parker fight some villains! </p>
             <p>When: 1/31/2022 7pm</p>
             <p><a class="watchLink" href="#" target="_blank">Watch Party</a></p>
@@ -36,7 +36,7 @@
         <div class="column is-one-quarter">
 			<img src="/static/images/avengers.jpg">
             <h1>Avengers: Age of Ultron</h1>
-            <p>Hosted By: Zaina Shawar</p>
+            <p>Hosted By: {{ request.user }}</p>
             <p>Description: This is the 2nd avengers movie! Come see all of your fav heros fight together</p>
             <p>When: 1/31/2022 7pm</p>
             <p><a class="watchLink" href="#" target="_blank">Watch Party</a></p>
@@ -46,9 +46,9 @@
                 <div class="column is-one-quarter">
                     <img src="/static/images/blackwidow.jpg">
                     <h1>{{ event.title }}</h1>
-                    <p>Hosted By: Zaina Shawar</p>
+                    <p>Hosted By: {{ request.user }}</p>
                     <p>Description: {{ event.description }}</p>
-                    <p>When: 1/31/2022 7pm</p>
+                    <p>When: {{ event.date_hosted }}</p>
                     <p><a class="watchLink" href="{{ event.link }}" target="_blank">Watch Party</a></p>
                 </div>
             {% endfor %}
@@ -110,6 +110,19 @@
             <p>When: 1/31/2022 7pm</p>
             <p><a class="watchLink" href="#" target="_blank">Watch Party</a></p>
 		</div>
+
+        {% if events %}
+        {% for event in events %}
+            <div class="column is-one-quarter">
+                <img src="/static/images/blackwidow.jpg">
+                <h1>{{ event.title }}</h1>
+                <p>Hosted By: {{ request.user }}</p>
+                <p>Description: {{ event.description }}</p>
+                <p>When: {{ event.date_hosted }}</p>
+                <p><a class="watchLink" href="{{ event.link }}" target="_blank">Watch Party</a></p>
+            </div>
+        {% endfor %}
+    {% endif %}
         
         
 	</div>

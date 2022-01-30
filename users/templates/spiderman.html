@@ -102,8 +102,8 @@
               <p>____________________</p>
               <h5>Join the chat!</h5>
               <div class="col-6">
-                <textarea type="text" class="input" placeholder="Say hi" v-model="newItem"
-                  @keyup.enter="addItem()"></textarea>
+                <textarea type="text" class="input" rows="4" cols="35" placeholder="Say hi" v-model="newItem"
+                  @keyup.enter="addItem()"> </textarea>
                   <button type="submit" class="btn btn-dark" v-on:click="addItem()">Send</button>
               </div><!-- End col -->
             </div><!--End Row -->
@@ -117,6 +117,13 @@
 <script>
   $(document).ready(function () {
 
+    $(".primaryContained").on('click', function () {
+      $(".comment").addClass("commentClicked");
+    });//end click
+    $("textarea").on('keyup.enter', function () {
+      $(".comment").addClass("commentClicked");
+    });//end keyup
+  });//End Function
   new Vue({
     el: "#comments",
     data: {
@@ -125,7 +132,7 @@
       item: [],
     },
     methods: {
-      addItem() {
+      addItem(user) {
         this.item.push("Carrie Lu: " + this.newItem);
         this.newItem = "";
       }
