@@ -1,0 +1,211 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<!-- ======= MapIntro Section ======= -->
+<section id="mapIntro" class="d-flex align-items-center">
+  <div class="container position-relative text-center text-lg-start" data-aos="zoom-in" data-aos-delay="100">
+    <div class="row">
+      <div class="col-lg-8">
+        <h1>Welcome to the <span>MCU!</span></h1>
+        <h2>Explore this limitless universe from Georgia, USA!</h2>
+      </div>
+      <div class="col-lg-4 d-flex align-items-center justify-content-center position-relative" data-aos="zoom-in"
+        data-aos-delay="200">
+        <a href="../map/#azuremap" class="glightbox play-btn"></a>
+      </div>
+
+    </div>
+  </div>
+</section><!-- End MapIntro -->
+
+<!-- ======= AzureMap Section ======= -->
+<section id="spiderman" class="spiderman">
+  <div class="container" data-aos="fade-up">
+    <h1 style="text-align: center;">5851 GA-85, Riverdale, GA 30274</h1>
+    <br>
+    <div class="row">
+      <div class="col-8">
+        <div class="card text-white bg-dark mb-3" style="width: 100%;">
+          <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <iframe width="1000" height="400" src="https://www.youtube.com/embed/frIhUcKin-A"
+                  title="YouTube video player" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Spiderman: Homecoming</h5>
+                  <p>Parachute Scene</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <iframe width="1000" height="400" src="https://www.youtube.com/embed/7b4Af0h12iA"
+                  title="YouTube video player" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Spiderman: No Way Home</h5>
+                  <p>Alternate Ending, Deleted Scenes, and Marvel Easter Eggs</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <iframe width="1000" height="400" src="https://www.youtube.com/embed/7b4Af0h12iA"
+                  title="YouTube video player" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Peter Parker and Tony Stark</h5>
+                  <p>Our favourite father-son duo ever</p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Spiderman</h3>
+            <p class="card-text">Sometimes student, sometimes scientist and sometimes photographer, Peter Parker is a
+              full-time superhero better known as the web-slinging and wall-crawling Spider-Man.<br> <br>
+              <b>Remember, with great power comes great responsibility.</b>
+            </p>
+            <a href="../map" class="btn btn-light">Explore More</a>
+          </div>
+        </div>
+        <br>
+
+
+        <div class="row">
+          <div class="card" style="width: 100%;">
+            <div class="card-body">
+              <h5 class="card-title">Leave a comment</h5>
+              <div class="form-group">
+                <label for="exampleFormControlTextarea1"></label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              </div>
+              <br>
+              <button type="submit" class="btn btn-dark">Post Comment</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+        <div class="col-4">
+
+          <!-- Comment Section-->
+          <div class="comments">
+            <div class="container">
+              <div class="row ">
+                <h3 style="text-align: center;">Comments</h3>
+              </div>
+            </div>
+            <div class="container mt-1 d-flex justify-content-center">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="card">
+                    <ul class="list-unstyled">
+                      <!--FIRST LIST ITEM-->
+                      <li class="media"> <span class="round pt-2"><img
+                            src="https://img.icons8.com/bubbles/100/000000/groups.png"
+                            class="align-self-start mr-3"></span>
+                        <div class="media-body">
+                          <div class="row d-flex">
+                            <h6 class="user pt-2">Steven Strange</h6>
+                            <div class="ml-auto">
+                              <p class="text">3m</p>
+                            </div>
+                          </div>
+                          <p class="text">and others liked this video</p>
+                          <div class="images mt-2"> <img
+                              src="https://img.icons8.com/bubbles/100/000000/couple-icloud.png" /> <img
+                              src="https://img.icons8.com/bubbles/100/000000/check-male.png" /> <img
+                              src="https://img.icons8.com/bubbles/100/000000/lock-female-user.png" /> <img
+                              src="https://img.icons8.com/bubbles/100/000000/lock-male-user.png" /> </div>
+                        </div>
+                      </li>
+                      <!--SECOND LIST ITEM-->
+                      <li class="media my-5"> <span class="round"> <img
+                            src="https://img.icons8.com/bubbles/100/000000/lock-female-user.png"
+                            class="align-self-start mr-3"> </span>
+                        <div class="media-body">
+                          <div class="row d-flex">
+                            <h6 class="user">Bruce Banner</h6>
+                            <div class="ml-auto">
+                              <p class="text">9m</p>
+                            </div>
+                          </div>
+                          <p class="text">Love this duo!</p>
+                        </div>
+                      </li>
+                      <!--THIRD LIST ITEM-->
+                      <li class="media"> <span class="round"><img
+                            src="https://img.icons8.com/bubbles/100/000000/groups.png"
+                            class="align-self-start mr-3"></span>
+                        <div class="media-body">
+                          <div class="row d-flex">
+                            <h6 class="user">Thor Odinson, Steve Rogers and 57 others</h6>
+                            <div class="ml-auto">
+                              <p class="text">1h</p>
+                            </div>
+                          </div>
+                          <p class="text mb-2">Recently watched this</p>
+                        </div>
+                      </li>
+                      <!--FOURTH LIST ITEM-->
+                      <li class="media my-5"> <span class="round"><img
+                            src="https://img.icons8.com/office/100/000000/user-group-man-man--v1.png"
+                            class="align-self-start mr-3"></span>
+                        <div class="media-body">
+                          <div class="row d-flex">
+                            <h6 class="user">Tony Stark</h6>
+                            <div class="ml-auto">
+                              <p class="text">2h</p>
+                            </div>
+                          </div>
+                          <p class="text">I love you 3000</p>
+                        </div>
+                      </li>
+                      <!--FIFTH LIST ITEM-->
+                      <li class="media"> <span class="round"><img
+                            src="https://img.icons8.com/office/100/000000/user-group-woman-woman.png"
+                            class="align-self-start mr-3"></span>
+                        <div class="media-body">
+                          <div class="row d-flex">
+                            <h6 class="user">Peter Parker</h6>
+                            <div class="ml-auto">
+                              <p class="text">24h</p>
+                            </div>
+                          </div>
+                          <p class="text">Can't wait to visit Atlanta with MJ... oh wait. :("</p>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</section><!-- End AzureMap Section -->
+
+{% endblock %}

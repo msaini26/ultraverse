@@ -105,6 +105,9 @@ def events(request):
 def superyoga(request):
     return render(request, 'superyoga.html')
 
+def spiderman(request):
+    return render(request, 'spiderman.html')
+    
 # This is temporary for testing on backend
 def developer(request):
     events = Event.objects.order_by('date_posted').all()
