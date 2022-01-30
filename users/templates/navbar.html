@@ -16,10 +16,26 @@
         <li class="nav-item">
             <a class="nav-link" href="{% url 'superyoga' %}">SUPERYOGA</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'login' %}">LOGIN</a>
-        </li>
         
+        
+        {% if request.user.is_authenticated %}
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'logout' %}">LOGOUT</a>
+          </li>
+          <span class="nav-link"> Hello, {{ request.user }} </span>
+          {% else %}
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'login' %}">LOGIN</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'register' %}">REGISTER</a>
+          </li>
+        {% endif %}
+
+        <br><br>
+        <span></span>
+        <br>
       </ul>
     </div>
   </nav>
+
