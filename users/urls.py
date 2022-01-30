@@ -11,7 +11,6 @@ urlpatterns = [
     path('create_comment/', views.create_comment, name='create_comment'),
     path('map/', views.map, name='map'),
     path('events/', views.events, name='events'),
-    path('event/', views.event, name='event'),
     path('spiderman/', views.spiderman, name='spiderman'),
     path('superyoga/', views.superyoga, name='superyoga'),
     # This is a temporary backend testpage

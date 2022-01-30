@@ -100,13 +100,27 @@ def map(request):
     return render(request, 'map.html')
 
 def events(request):
-    return render(request, 'events.html')
+    events = Event.objects.order_by('date_posted').all()
+    
+    context = {
+        'events': events,
+    }
+        
+    logger.info('Events template was rendered.')
+    return render(request, 'events.html', context)
 
 def superyoga(request):
     return render(request, 'superyoga.html')
 
 def spiderman(request):
-    return render(request, 'spiderman.html')
+    comments = Comment.objects.order_by('date_posted').all()
+    
+    context = {
+        'comments': comments,
+    }
+        
+    logger.info('Spiderman template was rendered.')
+    return render(request, 'spiderman.html', context)
     
 # This is temporary for testing on backend
 def developer(request):

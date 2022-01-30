@@ -208,4 +208,18 @@
 
 </section><!-- End AzureMap Section -->
 
+
+<h1>All Comment Data</h1>
+{% if comments %}
+{% for comment in comments %}
+	<p>Author: {{ comment.author }}</p>
+	<p>Description: {{ comment.date_posted }}</p>
+  <p>Comment: {{ comment.comment }}</p>
+	<br><br>
+{% endfor %}
+{% else %}
+	<p>No comment data in database.</p>
+{% endif %}
+
+
 {% endblock %}
