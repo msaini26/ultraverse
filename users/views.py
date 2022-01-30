@@ -80,22 +80,6 @@ def create_event(request):
     logger.info('Event form template was rendered.')
     return render(request, 'event.html', context)
 
-def create_comment(request):
-    form = CommentForm()
-    if request.method == 'POST':
-        form = CommentForm(request.POST)
-        logger.info('Test Print: ', request.POST)
-        if form.is_valid:
-            form.save()
-            logger.info('Event data was posted.')
-            logger.info('Redirecting to home.')
-            return redirect('home')
-    
-    context = {'form':form}
-    
-    logger.info('Event form template was rendered.')
-    return render(request, 'event.html', context)
-
 def map(request):
     return render(request, 'map.html')
 
@@ -114,9 +98,19 @@ def superyoga(request):
 
 def spiderman(request):
     comments = Comment.objects.order_by('date_posted').all()
-    
+    form = CommentForm()
+    if request.method == 'POST':
+        form = CommentForm(request.POST)
+        logger.info('Test Print: ', request.POST)
+        if form.is_valid:
+            form.save()
+            logger.info('Event data was posted.')
+            logger.info('Redirecting to home.')
+            return redirect('home')
+        
     context = {
         'comments': comments,
+        'form':form
     }
         
     logger.info('Spiderman template was rendered.')

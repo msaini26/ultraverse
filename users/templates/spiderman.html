@@ -208,6 +208,12 @@
 
 </section><!-- End AzureMap Section -->
 
+<h1>Comment Form</h1>
+<form action="" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" name="Submit">
+</form>
 
 <h1>All Comment Data</h1>
 {% if comments %}
