@@ -101,12 +101,9 @@ def spiderman(request):
     form = CommentForm()
     if request.method == 'POST':
         form = CommentForm(request.POST)
-        logger.info('Test Print: ', request.POST)
         if form.is_valid:
             form.save()
-            logger.info('Event data was posted.')
-            logger.info('Redirecting to home.')
-            return redirect('home')
+            logger.info('Comment data was posted.')
         
     context = {
         'comments': comments,
