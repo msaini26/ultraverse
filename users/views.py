@@ -78,7 +78,7 @@ def create_event(request):
     context = {'form':form}
     
     logger.info('Event form template was rendered.')
-    return render(request, 'event_form.html', context)
+    return render(request, 'event.html', context)
 
 def create_comment(request):
     form = CommentForm()
@@ -94,16 +94,13 @@ def create_comment(request):
     context = {'form':form}
     
     logger.info('Event form template was rendered.')
-    return render(request, 'event_form.html', context)
+    return render(request, 'event.html', context)
 
 def map(request):
     return render(request, 'map.html')
 
 def events(request):
     return render(request, 'events.html')
-
-def event(request):
-    return render(request, 'event.html')
 
 def superyoga(request):
     return render(request, 'superyoga.html')
