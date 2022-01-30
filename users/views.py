@@ -50,9 +50,8 @@ def user_login(request):
             
             if user is not None:
                 login(request, user)
-                # TODO: Fix redirect once we have an established page to redirect user upon login
-                logger.info('Login successful. Redirecting to home.')
-                return redirect('home')
+                logger.info('Login successful. Redirecting to events.')
+                return redirect('events')
             else: 
                 messages.info(request, 'username or password is incorrect')
         
@@ -72,8 +71,6 @@ def create_event(request):
         if form.is_valid:
             form.save()
             logger.info('Event data was posted.')
-            logger.info('Redirecting to home.')
-            return redirect('home')
     
     context = {'form':form}
     
