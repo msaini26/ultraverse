@@ -205,14 +205,11 @@ div .modal-dialog {
   padding-bottom: 3rem;
 }
 .isfull img {
-
-	-webkit-box-reflect: below 2px
-		linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.3));
-	-webkit-transition: all 0.5s ease;
-	-o-transition: all 0.5s ease;
-	transition: all 0.5s ease;
-
-
+  -webkit-box-reflect: below 2px
+    linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.3));
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 .is-one-quarter:hover {
   -webkit-transform: scale(1.1);
@@ -228,20 +225,18 @@ div .modal-dialog {
   margin-top: 6.5rem;
 }
 .featured_wrapper {
-
-	position: relative;
+  position: relative;
 }
 
 .featured_wrapper img {
-
-	width: 100%;
-	width: 100%;
-	height: 480px;
-  opacity: .5;
-	-o-object-fit: cover;
-	object-fit: cover;
-	-o-object-position: top;
-	object-position: top;
+  width: 100%;
+  width: 100%;
+  height: 480px;
+  opacity: 0.5;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: top;
+  object-position: top;
 }
 .title_wrapper {
   position: absolute;
@@ -256,29 +251,29 @@ div .modal-dialog {
   width: 70%;
 }
 .top button {
-	background: #4D8AB5;
-	color: black;
-	font-size: 18px;
-	padding: 0.5rem 3rem;
-	outline: none;
-	border: 0 !important;
+  background: #4d8ab5;
+  color: black;
+  font-size: 18px;
+  padding: 0.5rem 3rem;
+  outline: none;
+  border: 0 !important;
 }
-.top button:hover{
+.top button:hover {
   background: #68aad9;
 }
 .top a {
   text-decoration: none;
 }
 
-#backTop{
-	background: #4D8AB5;
-	color: black;
-	font-size: 18px;
-	padding: 0.5rem 3rem;
-	outline: none;
-	border: 0 !important;
+#backTop {
+  background: #4d8ab5;
+  color: black;
+  font-size: 18px;
+  padding: 0.5rem 3rem;
+  outline: none;
+  border: 0 !important;
 }
-#backTop:hover{
+#backTop:hover {
   background: #68aad9;
 }
 
@@ -305,8 +300,7 @@ div .modal-dialog {
   }
 }
 
-
-  div .column.is-one-quarter {
+div .column.is-one-quarter {
   margin-bottom: 45px;
 }
 
@@ -319,7 +313,6 @@ div .modal-dialog {
   color: #ede263;
   position: relative;
   font-weight: 600;
- 
 }
 
 .is-one-quarter p {
@@ -327,7 +320,6 @@ div .modal-dialog {
   color: white;
   position: relative;
   font-weight: 300;
-
 }
 
 /* End of events styling */
@@ -423,8 +415,13 @@ div .modal-dialog {
   opacity: 0.24;
 }
 
+.super-title {
+  font-size: 25px;
+  color: white;
+  font-family: "Segoe UI";
+}
+
 .super_title_wrapper {
-  position: absolute;
   top: 10rem;
   width: 100%;
   left: 2rem;
@@ -436,6 +433,50 @@ div .modal-dialog {
 .super_title_wrapper h1 {
   width: 70%;
   padding-bottom: 10px;
+}
+
+/* Modal Styling */
+
+.super-modal {
+  font-family: "Segoe UI", sans-serif;
+  padding: 0;
+  margin: 0;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.directions {
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  color: #000;
+  text-align: center;
+  border-radius: 20px;
+  padding: 30px 30px 70px;
+}
+
+#super-icon {
+  width: 82px;
+  margin-bottom: 15px;
+}
+p {
+  margin-bottom: 40px;
+  font-size: 18px;
+}
+button.accept {
+  background-color: #ed6755;
+  border: none;
+  border-radius: 5px;
+  width: 200px;
+  padding: 14px;
+  font-size: 16px;
+  color: white;
+  box-shadow: 0px 6px 18px -5px rgba(237, 103, 85, 1);
 }
 
 /* ML model styling */
@@ -454,18 +495,16 @@ div .modal-dialog {
   left: 25rem;
   padding: 20px 40px;
   font-family: "Segoe UI";
-  color:white;
+  color: white;
 }
 
 /* End ML model styling */
 /* End super yoga styling */
 
-
 /* Start of landing page */
 header .masthead {
-    padding-top: 17rem;
-    padding-bottom: 12rem;
-    
+  padding-top: 17rem;
+  padding-bottom: 12rem;
 }
 
 header.masthead {
@@ -483,18 +522,18 @@ header.masthead {
 }
 
 .join button {
-	background: #4D8AB5;
-	color: black;
-	font-size: 20px;
+  background: #4d8ab5;
+  color: black;
+  font-size: 20px;
   font-weight: bold;
-	padding: 0.5rem 3rem;
-	outline: none;
-	border: 0 !important;
+  padding: 0.5rem 3rem;
+  outline: none;
+  border: 0 !important;
   margin-right: 10px;
   border-radius: 10px;
   width: 150px;
 }
-.join button:hover{
+.join button:hover {
   background: #68aad9;
 }
 .join a {
@@ -502,41 +541,42 @@ header.masthead {
 }
 
 .box {
-  padding: 60px 0px
+  padding: 60px 0px;
 }
 
 .box-part {
-  background: #F0FFFF;
+  background: #f0ffff;
   padding: 60px 10px;
   margin: 30px 0px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  margin-bottom: 25px
+  margin-bottom: 25px;
 }
 
 .box-part:hover {
-  background: #000000
+  background: #000000;
 }
 
 .box-part:hover .fa,
 .box-part:hover .title,
 .box-part:hover .text,
 .box-part:hover a {
-  color: #FFF;
+  color: #fff;
   -webkit-transition: all 1s ease-out;
   -moz-transition: all 1s ease-out;
   -o-transition: all 1s ease-out;
-  transition: all 1s ease-out
+  transition: all 1s ease-out;
 }
 
 .text {
-  margin: 20px 0px
+  margin: 20px 0px;
 }
 
 .fa {
-  color: #00BFFF
+  color: #00bfff;
 }
 
-.page-section h2.section-heading, .page-section .section-heading.h2 {
+.page-section h2.section-heading,
+.page-section .section-heading.h2 {
   font-size: 2.5rem;
   margin-top: 0;
   margin-bottom: 1rem;
