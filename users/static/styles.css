@@ -590,6 +590,26 @@ div .modal-dialog {
 #backTop:hover {
   background: #68aad9;
 }
+#backTop2 {
+  background: #4d8ab5;
+  color: black;
+  font-size: 18px;
+  padding: 0.5rem 3rem;
+  outline: none;
+  border: 0 !important;
+  font-weight: 700;
+  font-size: 22px;
+  border-radius: 10px;
+}
+
+.centerButton {
+  display: flex;
+  justify-content: center;
+  
+}
+#backTop2:hover {
+  background: #68aad9;
+}
 
 .backTop:hover {
   text-decoration: none;
