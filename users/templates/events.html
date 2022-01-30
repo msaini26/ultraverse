@@ -11,7 +11,7 @@
 			<img src="/static/images/avengers.jpg" class="featured">
 			<div class="title_wrapper">
 				<span class="has-text-white" id="top">Watch Parties</span>
-				<h1 class="title is-1 has-text-white">Join others from around the world and <br> watch your favorite movies</h1>
+				<h1 class="title is-1 has-text-white">Hello, {{ request.user }}, join others from around the world and watch your favorite movies</h1>
 				<a href="#public"><button class="button is-medium">Find Movie</button></a>
                 <a href="{% url 'create_event' %}"><button class="button is-medium">Create Party</button></a>
 			</div>

@@ -44,6 +44,7 @@ nav {
   padding: 0.5rem 0rem;
 }
 
+
 #logo {
   width: 175px;
 }
@@ -920,6 +921,15 @@ header.masthead {
 .team-member {
   margin-bottom: 3rem;
   text-align: center;
+}
+
+.rounded-circle {
+  width: 200px;
+  height: 200px;
+}
+
+.landingpageLogo {
+  background:#011736;
 }
 
 /* end of landing page */
