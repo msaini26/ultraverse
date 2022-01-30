@@ -11,7 +11,7 @@
 			<img src="/static/images/avengers.jpg" class="featured">
 			<div class="title_wrapper">
 				<span class="has-text-white" id="top">Watch Parties</span>
-				<h1 class="title is-1 has-text-white">Join others from around the world and <br> watch your favorite movies</h1>
+				<h1 class="title is-1 has-text-white">Hello, {{ request.user }}, join others from around the world and watch your favorite movies</h1>
 				<a href="#public"><button class="button is-medium">Find Movie</button></a>
                 <a href="{% url 'create_event' %}"><button class="button is-medium">Create Party</button></a>
 			</div>
@@ -24,51 +24,38 @@
 		<div class="column is-full">
 			<h3 class="has-text-white">My Watch Parties</h3>
 		</div>
-     
-		<div class="column is-one-quarter">
-			<img src="/static/images/avengers.jpg">
-			<h1>Avengers: Age of Ultron</h1>
-            <p>Hosted By: Zaina Shawar</p>
-            <p>When: 1/31/2022 7pm</p>
-		</div>
         
 		<div class="column is-one-quarter">
-			<img src="https://raw.githubusercontent.com/brixiobodino/coffeholic/main/image2.PNG">
-            <h1>Avengers: Age of Ultron</h1>
+			<img src="/static/images/spidermanNoWayHome.jpg">
+            <h1>Spiderman: No Way Home</h1>
             <p>Hosted By: Zaina Shawar</p>
+            <p>Description: Join us and watch Peter Parker fight some villains! </p>
             <p>When: 1/31/2022 7pm</p>
-		</div>
-		<div class="column is-one-quarter">
-			<img src="https://raw.githubusercontent.com/brixiobodino/coffeholic/main/img3.PNG">
-            <h1>Avengers: Age of Ultron</h1>
-            <p>Hosted By: Zaina Shawar</p>
-            <p>When: 1/31/2022 7pm</p>
-		</div>
-		<div class="column is-one-quarter">
-			<img src="https://raw.githubusercontent.com/brixiobodino/coffeholic/main/img4.PNG">
-            <h1>Avengers: Age of Ultron</h1>
-            <p>Hosted By: Zaina Shawar</p>
-            <p>When: 1/31/2022 7pm</p>
+            <p><a class="watchLink" href="#" target="_blank">Watch Party</a></p>
 		</div>
         <div class="column is-one-quarter">
-			<img src="https://raw.githubusercontent.com/brixiobodino/coffeholic/main/img4.PNG">
+			<img src="/static/images/avengers.jpg">
             <h1>Avengers: Age of Ultron</h1>
             <p>Hosted By: Zaina Shawar</p>
+            <p>Description: This is the 2nd avengers movie! Come see all of your fav heros fight together</p>
             <p>When: 1/31/2022 7pm</p>
+            <p><a class="watchLink" href="#" target="_blank">Watch Party</a></p>
 		</div>
-        <div class="column is-one-quarter">
-			<img src="https://raw.githubusercontent.com/brixiobodino/coffeholic/main/img4.PNG">
-            <h1>Avengers: Age of Ultron</h1>
-            <p>Hosted By: Zaina Shawar</p>
-            <p>When: 1/31/2022 7pm</p>
-		</div>
-        <div class="column is-one-quarter">
-			<img src="https://raw.githubusercontent.com/brixiobodino/coffeholic/main/img4.PNG">
-            <h1>Avengers: Age of Ultron</h1>
-            <p>Hosted By: Zaina Shawar</p>
-            <p>When: 1/31/2022 7pm</p>
-		</div>
-	</div>
+        {% if events %}
+            {% for event in events %}
+                <div class="column is-one-quarter">
+                    <img src="/static/images/blackwidow.jpg">
+                    <h1>{{ event.title }}</h1>
+                    <p>Hosted By: Zaina Shawar</p>
+                    <p>Description: {{ event.description }}</p>
+                    <p>When: 1/31/2022 7pm</p>
+                    <p><a class="watchLink" href="{{ event.link }}" target="_blank">Watch Party</a></p>
+                </div>
+            {% endfor %}
+        {% endif %}
+       
+            
+         
 
 
     <div class="columns is-multiline p-0 pt-6 last">
@@ -76,47 +63,54 @@
 			<h3 id="public" class="has-text-white">Public Watch Parties</h3>
 		</div>
 		<div class="column is-one-quarter">
+			<img src="/static/images/spidermanNoWayHome.jpg">
+            <h1>Spiderman: No Way Home</h1>
+            <p>Hosted By: Zaina Shawar</p>
+            <p>Description: Join us and watch Peter Parker fight some villains! </p>
+            <p>When: 1/31/2022 7pm</p>
+            <p><a class="watchLink" href="#" target="_blank">Watch Party</a></p>
+		</div>
+        <div class="column is-one-quarter">
 			<img src="/static/images/avengers.jpg">
-			<h1>Avengers: Age of Ultron</h1>
+            <h1>Avengers: Age of Ultron</h1>
             <p>Hosted By: Zaina Shawar</p>
+            <p>Description: This is the 2nd avengers movie! Come see all of your fav heros fight together</p>
             <p>When: 1/31/2022 7pm</p>
+            <p><a class="watchLink" href="#" target="_blank">Watch Party</a></p>
 		</div>
 		<div class="column is-one-quarter">
-			<img src="https://raw.githubusercontent.com/brixiobodino/coffeholic/main/image2.PNG">
-            <h1>Avengers: Age of Ultron</h1>
-            <p>Hosted By: Zaina Shawar</p>
+			<img src="/static/images/guardians.jpg">
+            <h1>Guardians of the Galaxy</h1>
+            <p>Hosted By: Carrie Lu</p>
+            <p>Description: Protectors of the galaxy, the best movie out there.</p>
             <p>When: 1/31/2022 7pm</p>
-		</div>
-		<div class="column is-one-quarter">
-			<img src="https://raw.githubusercontent.com/brixiobodino/coffeholic/main/img3.PNG">
-            <h1>Avengers: Age of Ultron</h1>
-            <p>Hosted By: Zaina Shawar</p>
-            <p>When: 1/31/2022 7pm</p>
-		</div>
-		<div class="column is-one-quarter">
-			<img src="https://raw.githubusercontent.com/brixiobodino/coffeholic/main/img4.PNG">
-            <h1>Avengers: Age of Ultron</h1>
-            <p>Hosted By: Zaina Shawar</p>
-            <p>When: 1/31/2022 7pm</p>
+            <p><a class="watchLink" href="#" target="_blank">Watch Party</a></p>
 		</div>
         <div class="column is-one-quarter">
-			<img src="https://raw.githubusercontent.com/brixiobodino/coffeholic/main/img4.PNG">
-            <h1>Avengers: Age of Ultron</h1>
-            <p>Hosted By: Zaina Shawar</p>
+			<img src="/static/images/captainMarvel.jpg">
+            <h1>Captain Marvel</h1>
+            <p>Hosted By: Mansi Saini</p>
+            <p>Description: Who else loves this movie? NASA employee turned hybrid with powers!</p>
             <p>When: 1/31/2022 7pm</p>
+            <p><a class="watchLink" href="#" target="_blank">Watch Party</a></p>
 		</div>
         <div class="column is-one-quarter">
-			<img src="https://raw.githubusercontent.com/brixiobodino/coffeholic/main/img4.PNG">
-            <h1>Avengers: Age of Ultron</h1>
-            <p>Hosted By: Zaina Shawar</p>
+			<img src="/static/images/ironman.jpg">
+            <h1>Iron Man</h1>
+            <p>Hosted By: Jess Cassidy</p>
+            <p>Description: Tony Stark faces the consequences of his technology. Will he start creating for good? </p>
             <p>When: 1/31/2022 7pm</p>
+            <p><a class="watchLink" href="#" target="_blank">Watch Party</a></p>
 		</div>
         <div class="column is-one-quarter">
-			<img src="https://raw.githubusercontent.com/brixiobodino/coffeholic/main/img4.PNG">
-            <h1>Avengers: Age of Ultron</h1>
-            <p>Hosted By: Zaina Shawar</p>
+			<img src="/static/images/ThorRagnarok.jpg">
+            <h1>Thor: Ragnarok</h1>
+            <p>Hosted By: Carrie Lu</p>
+            <p>Description: The best Thor movie from the series and truly a cinematic masterpiece.</p>
             <p>When: 1/31/2022 7pm</p>
+            <p><a class="watchLink" href="#" target="_blank">Watch Party</a></p>
 		</div>
+        
         
 	</div>
     <a href="#top" class="backTop"><button id="backTop" class="button is-medium">Back to Top</button></a>
@@ -124,18 +118,7 @@
 
 
 
-</div>
-<h1>All Event Data</h1>
-{% if events %}
-{% for event in events %}
-	<p>Title: Title: {{ event.title }}</p>
-	<p>Hosted By: {{ event.author }}</p>
-	<p>Description: {{ event.description }}</p>
-	<p>Link: <a href="{{ event.link }}" target="_blank">Link</a>
-	<br><br>
-{% endfor %}
-{% else %}
-	<p>No event data in database.</p>
-{% endif %}
+
+
 
 {% endblock %}

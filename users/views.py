@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 
 from .models import *
 from .forms import UserRegisterForm, EventForm, CommentForm
@@ -50,9 +51,8 @@ def user_login(request):
             
             if user is not None:
                 login(request, user)
-                # TODO: Fix redirect once we have an established page to redirect user upon login
-                logger.info('Login successful. Redirecting to home.')
-                return redirect('home')
+                logger.info('Login successful. Redirecting to events.')
+                return redirect('events')
             else: 
                 messages.info(request, 'username or password is incorrect')
         
@@ -64,6 +64,18 @@ def user_logout(request):
     logger.info('User has been logged out and redirected to login.')
     return redirect('login')
 
+# @login_required(login_url='login')
+def events(request):
+    events = Event.objects.order_by('date_posted').all()
+    
+    context = {
+        'events': events,
+    }
+        
+    logger.info('Events template was rendered.')
+    return render(request, 'events.html', context)
+
+# @login_required(login_url='login')
 def create_event(request):
     form = EventForm()
     if request.method == 'POST':
@@ -72,8 +84,9 @@ def create_event(request):
         if form.is_valid:
             form.save()
             logger.info('Event data was posted.')
-            logger.info('Redirecting to home.')
-            return redirect('home')
+
+            logger.info('Redirecting to events.')
+            return redirect('events')
     
     context = {'form':form}
     
@@ -90,38 +103,40 @@ def create_comment(request):
             logger.info('Event data was posted.')
             logger.info('Redirecting to home.')
             return redirect('home')
+
     
     context = {'form':form}
     
     logger.info('Event form template was rendered.')
     return render(request, 'event.html', context)
 
+# @login_required(login_url='login')
 def map(request):
     return render(request, 'map.html')
 
-def events(request):
-    events = Event.objects.order_by('date_posted').all()
-    
-    context = {
-        'events': events,
-    }
-        
-    logger.info('Events template was rendered.')
-    return render(request, 'events.html', context)
-
+# @login_required(login_url='login')
 def superyoga(request):
     return render(request, 'superyoga.html')
 
+# @login_required(login_url='login')
 def spiderman(request):
     comments = Comment.objects.order_by('date_posted').all()
-    
+    form = CommentForm()
+    if request.method == 'POST':
+        form = CommentForm(request.POST)
+        if form.is_valid:
+            form.save()
+            logger.info('Comment data was posted.')
+        
     context = {
         'comments': comments,
+        'form':form
     }
         
     logger.info('Spiderman template was rendered.')
     return render(request, 'spiderman.html', context)
-    
+
+# @login_required(login_url='login')
 # This is temporary for testing on backend
 def developer(request):
     events = Event.objects.order_by('date_posted').all()

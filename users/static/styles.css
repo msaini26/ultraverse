@@ -44,6 +44,7 @@ nav {
   padding: 0.5rem 0rem;
 }
 
+
 #logo {
   width: 175px;
 }
@@ -514,6 +515,10 @@ div .modal-dialog {
 }
 
 .isfull img {
+.container {
+  padding-bottom: 3rem;
+}
+.is-full img, .is-one-quarter img {
   -webkit-box-reflect: below 2px
     linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.3));
   -webkit-transition: all 0.5s ease;
@@ -847,4 +852,49 @@ header.masthead {
   text-align: center;
 }
 
+.rounded-circle {
+  width: 200px;
+  height: 200px;
+}
+
+.landingpageLogo {
+  background:#011736;
+}
+
 /* end of landing page */
+
+/* create event styling */
+header .masthead2 {
+  padding-top: 17rem;
+  padding-bottom: 12rem;
+  
+}
+
+header.masthead2 {
+padding-top: 16.5rem;
+padding-bottom: 12rem;
+text-align: center;
+color: #fff;
+background: linear-gradient(rgba(255, 116, 116, 0.65), rgba(0, 0, 0, 0.5)),
+  url("images/groot.jpg") top center;
+background-color: black;
+background-repeat: no-repeat;
+background-attachment: scroll;
+background-position: center center;
+background-size: cover;
+}
+
+.descriptionForm {
+  border-radius: 10px;
+}
+
+.watchLink {
+  color: white;
+  text-decoration: underline;
+}
+
+.watchLink:hover {
+  color: #68aad9;
+  text-decoration: underline;
+}
+/* create event end of styling */
