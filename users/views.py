@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 
 from .models import *
 from .forms import UserRegisterForm, EventForm, CommentForm
@@ -63,6 +64,18 @@ def user_logout(request):
     logger.info('User has been logged out and redirected to login.')
     return redirect('login')
 
+# @login_required(login_url='login')
+def events(request):
+    events = Event.objects.order_by('date_posted').all()
+    
+    context = {
+        'events': events,
+    }
+        
+    logger.info('Events template was rendered.')
+    return render(request, 'events.html', context)
+
+# @login_required(login_url='login')
 def create_event(request):
     form = EventForm()
     if request.method == 'POST':
@@ -77,22 +90,15 @@ def create_event(request):
     logger.info('Event form template was rendered.')
     return render(request, 'event.html', context)
 
+# @login_required(login_url='login')
 def map(request):
     return render(request, 'map.html')
 
-def events(request):
-    events = Event.objects.order_by('date_posted').all()
-    
-    context = {
-        'events': events,
-    }
-        
-    logger.info('Events template was rendered.')
-    return render(request, 'events.html', context)
-
+# @login_required(login_url='login')
 def superyoga(request):
     return render(request, 'superyoga.html')
 
+# @login_required(login_url='login')
 def spiderman(request):
     comments = Comment.objects.order_by('date_posted').all()
     form = CommentForm()
@@ -109,7 +115,8 @@ def spiderman(request):
         
     logger.info('Spiderman template was rendered.')
     return render(request, 'spiderman.html', context)
-    
+
+# @login_required(login_url='login')
 # This is temporary for testing on backend
 def developer(request):
     events = Event.objects.order_by('date_posted').all()
