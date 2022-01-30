@@ -203,6 +203,7 @@ div .modal-dialog {
 }
 .container {
   padding-bottom: 3rem;
+  display: flex;
 }
 .isfull img {
   -webkit-box-reflect: below 2px
@@ -326,99 +327,17 @@ div .column.is-one-quarter {
 
 /* Start Superyoga styling */
 
-.start-btn {
-  background-color: initial;
-  border-style: none;
-  color: #fff;
-  cursor: pointer;
-  font-family: "Segoe UI";
-  font-size: 16px;
-  font-weight: 800;
-  min-height: 55px;
-  padding: 0px 50px;
-  position: relative;
-}
-
-.start-btn:before,
-.start-btn:after {
-  border-radius: 80px;
-}
-
-.start-btn:before {
-  background-image: linear-gradient(92.83deg, #ff7426 0, #f93a13 100%);
-  content: "";
-  display: block;
-  height: 100%;
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: -2;
-}
-
-.start-btn:after {
-  background-color: initial;
-  background-image: linear-gradient(#541a0f 0, #0c0d0d 100%);
-  bottom: 4px;
-  content: "";
-  display: block;
-  left: 4px;
-  overflow: hidden;
-  position: absolute;
-  right: 4px;
-  top: 4px;
-  transition: all 100ms ease-out;
-  z-index: -1;
-}
-
-.start-btn:hover:not(:disabled):before {
-  background: linear-gradient(
-    92.83deg,
-    rgb(255, 116, 38) 0%,
-    rgb(249, 58, 19) 100%
-  );
-}
-
-.start-btn:hover:not(:disabled):after {
-  bottom: 0;
-  left: 0;
-  right: 0;
-  top: 0;
-  transition-timing-function: ease-in;
-  opacity: 0;
-}
-
-.start-btn:active:not(:disabled) {
-  color: #ccc;
-}
-
-.start-btn:active:not(:disabled):before {
-  background-image: linear-gradient(
-      0deg,
-      rgba(0, 0, 0, 0.2),
-      rgba(0, 0, 0, 0.2)
-    ),
-    linear-gradient(92.83deg, #ff7426 0, #f93a13 100%);
-}
-
-.start-btn:active:not(:disabled):after {
-  background-image: linear-gradient(#541a0f 0, #0c0d0d 100%);
-  bottom: 4px;
-  left: 4px;
-  right: 4px;
-  top: 4px;
-}
-
-.start-btn:disabled {
-  cursor: default;
-  opacity: 0.24;
-}
-
 .super-title {
-  font-size: 25px;
+  font-size: 3rem;
   color: white;
   font-family: "Segoe UI";
+  font-weight: 800;
+}
+
+#sub {
+  color: white;
+  font-weight: 300;
+  font-size: 1.25rem;
 }
 
 .super_title_wrapper {
@@ -437,6 +356,11 @@ div .column.is-one-quarter {
 
 /* Modal Styling */
 
+.elements {
+  display: flex;
+  float: left;
+}
+
 .super-modal {
   font-family: "Segoe UI", sans-serif;
   padding: 0;
@@ -446,56 +370,108 @@ div .column.is-one-quarter {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  border-radius: 20px;
 }
 
 .directions {
-  width: 320px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   background-color: #fff;
   color: #000;
   text-align: center;
   border-radius: 20px;
-  padding: 30px 30px 70px;
+}
+
+.top-marg {
+  margin: 20px;
+}
+
+.img-block {
+  background-color: white;
+  border-radius: 25px;
+  box-shadow: 1px 6px 10px -4px rgb(51 51 51);
+}
+
+.ref-img {
+  object-fit: cover;
+  width: 17rem;
+  padding: 16px;
+  height: 15rem;
+  border-radius: 25px;
+}
+
+.ref-img-align {
+  display: flex;
+  justify-content: center;
 }
 
 #super-icon {
-  width: 82px;
-  margin-bottom: 15px;
+  width: 150px;
+  margin-top: 65px;
 }
-p {
-  margin-bottom: 40px;
+.super-p {
+  margin-bottom: 50px;
   font-size: 18px;
+  margin-top: 85px;
 }
-button.accept {
-  background-color: #ed6755;
+
+.group {
+  font-family: Segoe UI;
+  font-weight: 150;
+  display: flex;
+  justify-content: center;
+  color: #59161a;
+  padding-top: 10px;
+  font-size: 25px;
+}
+
+/* begin button styling */
+#super-begin {
+  width: 50%;
+  height: 50px;
+  border-radius: 25px;
+  outline: none;
   border: none;
-  border-radius: 5px;
-  width: 200px;
-  padding: 14px;
-  font-size: 16px;
-  color: white;
-  box-shadow: 0px 6px 18px -5px rgba(237, 103, 85, 1);
+  background-image: linear-gradient(to right, #74171b, #951e22, #59161a);
+  background-size: 200%;
+  font-size: 1.2rem;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  margin: 1rem 0;
+  cursor: pointer;
+  transition: 0.5s;
+  text-align: center;
 }
+
+#super-begin a {
+  text-align: center;
+  color: #fff;
+}
+
+#super-begin a:hover {
+  text-align: center;
+  color: #fff;
+}
+
+button:hover {
+  background-position: right;
+}
+
+/* end begin button styling */
+/* end modal styling */
 
 /* ML model styling */
 
 #canvas {
-  position: absolute;
-  top: 25rem;
+  top: 35rem;
   left: 2rem;
-  padding: 20px 40px;
   height: 20rem;
+  border-radius: 25px;
+  margin-top: 20px;
 }
 
 #label-container {
-  position: absolute;
-  top: 30rem;
-  left: 25rem;
-  padding: 20px 40px;
+  padding: 30px 30px;
   font-family: "Segoe UI";
-  color: white;
+  color: black;
 }
 
 /* End ML model styling */
