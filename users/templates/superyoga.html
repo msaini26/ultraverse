@@ -1,24 +1,68 @@
 {% extends 'base.html' %} {% block content %}
 <div>
-  <div class="super_title_wrapper">
-    <h1 class="super-title">Welcome to Super Yoga</h1>
-    <div class="container" class="super-modal">
-        <div class="directions">
-          <img id="super-icon" src="https://cdn-icons.flaticon.com/png/512/3200/premium/3200506.png?token=exp=1634984321~hmac=ba9aa75696b0b62de7e42e5f38a970c7" alt="cookies-img" />
-          <p>Welcome to Super Yoga! Ready to try out some superhero moves? Click start 
-              to get started. Follow the references images below and the machine learning 
-              model will try to guess what pose you are doing. Good luck!
-          </p>
-          <button class="accept">That's fine!</button>
+  <div class="top">
+    <div class="columns">
+      <div class="column is-full featured_wrapper p-0">
+        <img src="../static/images/background-widow.jpg" class="featured" />
+        <div class="title_wrapper">
+          <!-- Super Yoga Heading -->
+          <h1 class="super-title">Welcome to Super Yoga!</h1>
+          <p id="sub">Find your inner superhero 💪</p>
         </div>
       </div>
-    <button class="start-btn" type="button" onclick="init()">
-      START SUPER YOGA
-    </button>
+    </div>
   </div>
 
-  <div><canvas id="canvas"></canvas></div>
-  <div id="label-container"></div>
+  <div class="super_title_wrapper">
+    <!-- Super Yoga Directions -->
+    <div class="container">
+      <div class="row">
+        <!-- Group two modals together  -->
+        <div class="col-md-5 img-block top-marg">
+          <div class="directions">
+            <img
+              id="super-icon"
+              src="../static/images/role-model.png"
+              alt="superhero-img"
+            />
+            <p class="super-p">
+              Welcome to Super Yoga! Ready to try out some superhero moves?
+              Click start to get started. Follow the references images below and
+              the machine learning model will try to guess what pose you are
+              doing. Good luck!
+            </p>
+            <button id="super-begin" onclick="init()">Begin!</button>
+          </div>
+        </div>
+        <!-- Super Yoga ML Model -->
+        <div class="col-md-6 img-block top-marg">
+          <div class="directions">
+            <canvas id="canvas"></canvas>
+            <div id="label-container"></div>
+          </div>
+        </div>
+        <div class="col-md-12 img-block ref-img-align">
+          <div>
+            <p class="group">Black Widow</p>
+            <img class="ref-img" src="../static/images/widow.png" />
+          </div>
+          <div>
+            <p class="group">Captain America</p>
+            <img class="ref-img" src="../static/images/captain.png" />
+          </div>
+          <div>
+            <p class="group">Captain Marvel</p>
+            <img class="ref-img" src="../static/images/marvel.png" />
+          </div>
+          <div>
+            <p class="group">Iron Man</p>
+            <img class="ref-img" src="../static/images/iron.png" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Javascript implementation of ML model -->
   <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/pose@0.8/dist/teachablemachine-pose.min.js"></script>
   <script type="text/javascript">
@@ -96,4 +140,5 @@
   <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/pose@0.8.3/dist/teachablemachine-pose.min.js"></script>
 </div>
+
 {% endblock %}
