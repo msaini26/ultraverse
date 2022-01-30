@@ -539,7 +539,7 @@ div .modal-dialog {
 .container {
   padding-bottom: 3rem;
 }
-.isfull img {
+.is-full img, .is-one-quarter img {
   -webkit-box-reflect: below 2px
     linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.3));
   -webkit-transition: all 0.5s ease;
@@ -948,6 +948,16 @@ background-size: cover;
 
 .descriptionForm {
   border-radius: 10px;
+}
+
+.watchLink {
+  color: white;
+  text-decoration: underline;
+}
+
+.watchLink:hover {
+  color: #68aad9;
+  text-decoration: underline;
 }
 /* create event end of styling */
 
