@@ -820,7 +820,7 @@ header.masthead {
   text-align: center;
   color: #fff;
   background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.5)),
-    url("images/citybackdrop.png") top center;
+    url("/static/images/citybackdrop.png") top center;
   background-color: black;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -919,7 +919,7 @@ padding-bottom: 12rem;
 text-align: center;
 color: #fff;
 background: linear-gradient(rgba(255, 116, 116, 0.65), rgba(0, 0, 0, 0.5)),
-  url("images/groot.jpg") top center;
+  url("/static/images/groot.jpg") top center;
 background-color: black;
 background-repeat: no-repeat;
 background-attachment: scroll;
