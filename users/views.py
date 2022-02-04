@@ -11,6 +11,7 @@ logger = logging.getLogger('django')
 
 # Create your views here.
 def home(request):
+    logger.info('Home template was rendered.')
     return render(request, 'index.html')
 
 def user_register(request):
@@ -93,29 +94,14 @@ def create_event(request):
     logger.info('Event form template was rendered.')
     return render(request, 'event.html', context)
 
-def create_comment(request):
-    form = CommentForm()
-    if request.method == 'POST':
-        form = CommentForm(request.POST)
-        logger.info('Test Print: ', request.POST)
-        if form.is_valid:
-            form.save()
-            logger.info('Event data was posted.')
-            logger.info('Redirecting to home.')
-            return redirect('home')
-
-    
-    context = {'form':form}
-    
-    logger.info('Event form template was rendered.')
-    return render(request, 'event.html', context)
-
 @login_required(login_url='login')
 def map(request):
+    logger.info('Marvel Map template was rendered.')
     return render(request, 'map.html')
 
 @login_required(login_url='login')
 def superyoga(request):
+    logger.info('Superyoga template was rendered.')
     return render(request, 'superyoga.html')
 
 @login_required(login_url='login')
