@@ -157,7 +157,7 @@ USE_TZ = True
 # If updates made to static files, use CMD '$ python manage.py collectstatic'to overwrite the staticfiles directory located in main directory
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-STATIC_ROOT = os.path.join(BASE_DIR, 'users/static/staticFiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticFiles')
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'users/static'),
