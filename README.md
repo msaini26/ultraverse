@@ -1,4 +1,9 @@
-# Welcome to Ultraverse!
+# Welcome to Ultraverse! 🚀
+
+## Ultraverse TechTogether Atlanta Hackathon Wins
+`✨ WINNER: The Prettiest Hack`
+
+`✨ WINNER: What a Marvelous Hack`
 
 ## Inspiration
 Marvel has always been and always will be the highest-grossing film franchise in the entertainment industry. But what makes their films so special compared to the rest? The experience. Every Marvel movie teleports its audience to the Marvel Cinematic Universe and immerses them in an epic storyline and cutting-edge visuals. 
